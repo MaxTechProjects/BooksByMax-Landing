@@ -1,0 +1,17 @@
+# GitHub Pages configuration for BooksByMax Landing
+title: BooksByMax Landing Page
+description: Author landing page for BooksByMax Designs
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://mnyamolo.github.io" # the base hostname & protocol for your site
+
+# Build settings
+theme: null # No Jekyll theme - pure HTML/CSS
+plugins: [] # No plugins needed
+
+# Exclude from processing
+exclude:
+  - .github/
+  - README.md
+  - DESIGN_CONCEPTS.md
+  - MANUAL_DATA_GATHERING_GUIDE.md
+  - books_master_30.csv
