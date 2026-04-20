@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BooksByMax - Fun Activity Books for Kids</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Comic Neue', cursive, sans-serif;
+            background: linear-gradient(135deg, #fefcbf 0%, #f6e05e 100%);
+            color: #2d3748;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin: 20px 0;
+            border: 5px solid #4299e1;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .brand-name {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #4299e1;
+            margin-bottom: 10px;
+        }
+        .brand-tagline {
+            font-size: 1.8rem;
+            color: #ed8936;
+            margin-bottom: 30px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+            color: white;
+            border-radius: 15px;
+            margin-bottom: 50px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        .hero-cta {
+            display: inline-block;
+            background: #ed8936;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+        .hero-cta:hover {
+            background: #dd6b20;
+            transform: scale(1.05);
+        }
+        
+        /* Featured Section */
+        .featured-section {
+            margin: 60px 0;
+            text-align: center;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            color: #4299e1;
+            margin-bottom: 40px;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 5px;
+            background: #f6e05e;
+            border-radius: 5px;
+        }
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .featured-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border: 3px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        .featured-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+            border-color: #4299e1;
+        }
+        .featured-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #ed8936;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        .featured-cover {
+            width: 200px;
+            height: 260px;
+            background: #e2e8f0;
+            margin: 0 auto 20px;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            border: 5px solid #f6e05e;
+        }
+        .featured-cover::after {
+            content: '📚';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            opacity: 0.2;
+        }
+        .featured-title {
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+        .featured-description {
+            color: #718096;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        .featured-stats {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+        .stat {
+            background: #edf2f7;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            color: #718096;
+        }
+        .featured-button {
+            display: inline-block;
+            padding: 10px 30px;
+            background: #4299e1;
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: background 0.2s;
+            margin-top: 10px;
+        }
+        .featured-button:hover {
+            background: #3182ce;
+        }
+        
+        /* Category Sections */
+        .category-section {
+            margin: 80px 0;
+            padding: 40px;
+            border-radius: 20px;
+            position: relative;
+        }
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 4px solid;
+        }
+        .category-icon {
+            font-size: 3.5rem;
+            background: white;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            border: 4px solid;
+        }
+        .category-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+        }
+        .category-description {
+            font-size: 1.3rem;
+            color: #718096;
+            margin-top: 10px;
+        }
+        
+        .category-coloring {
+            background: #ebf8ff;
+            border: 4px solid #4299e1;
+        }
+        .category-coloring .category-header {
+            border-color: #4299e1;
+        }
+        .category-coloring .category-icon {
+            border-color: #4299e1;
+            color: #4299e1;
+        }
+        
+        .category-journals {
+            background: #fffaf0;
+            border: 4px solid #f6e05e;
+        }
+        .category-journals .category-header {
+            border-color: #f6e05e;
+        }
+        .category-journals .category-icon {
+            border-color: #f6e05e;
+            color: #d69e2e;
+        }
+        
+        .category-cookbooks {
+            background: #feebc8;
+            border: 4px solid #ed8936;
+        }
+        .category-cookbooks .category-header {
+            border-color: #ed8936;
+        }
+        .category-cookbooks .category-icon {
+            border-color: #ed8936;
+            color: #ed8936;
+        }
+        
+        /* Books Grid */
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 30px;
+        }
+        .book-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+        .book-cover {
+            width: 160px;
+            height: 210px;
+            background: #e2e8f0;
+            margin: 0 auto 15px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .book-cover::after {
+            content: '📖';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            opacity: 0.3;
+        }
+        .book-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: #2d3748;
+        }
+        .book-meta {
+            font-size: 0.9rem;
+            color: #718096;
+            margin-bottom: 12px;
+        }
+        .book-button {
+            display: inline-block;
+            padding: 8px 20px;
+            background: #4299e1;
+            color: white;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        .book-button:hover {
+            background: #3182ce;
+        }
+        
+        /* Author Section */
+        .author-section {
+            background: linear-gradient(135deg, #4299e1, #f6e05e);
+            color: white;
+            padding: 50px;
+            border-radius: 20px;
+            margin-top: 80px;
+            text-align: center;
+        }
+        .author-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+        }
+        .author-bio {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-size: 1.3rem;
+            line-height: 1.8;
+        }
+        .contact-info {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .brand-name { font-size: 2.5rem; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1.2rem; }
+            .section-title { font-size: 2rem; }
+            .category-title { font-size: 2rem; }
+            .category-header { flex-direction: column; text-align: center; gap: 15px; }
+            .category-icon { width: 70px; height: 70px; font-size: 2.5rem; }
+            .featured-grid, .books-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="brand-name">BooksByMax</div>
+            <div class="brand-tagline">Fun Activity Books for Kids! 🎨</div>
+        </div>
+        
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>Welcome to BooksByMax!</h1>
+            <p>Discover fun, educational books that spark creativity and learning in young minds</p>
+            <a href="#featured" class="hero-cta">Explore Featured Books</a>
+        </div>
+        
+        <!-- Featured Section -->
+        <div class="featured-section" id="featured">
+            <h2 class="section-title">🌟 FEATURED BOOKS 🌟</h2>
+            <p style="font-size: 1.2rem; color: #718096; max-width: 800px; margin: 0 auto 30px;">
+                Our most popular titles loved by thousands of kids and parents!
+            </p>
+            
+            <div class="featured-grid">
+                <!-- Featured Book 1 -->
+                <div class="featured-card">
+                    <div class="featured-badge">BEST SELLER</div>
+                    <div class="featured-cover"></div>
+                    <div class="featured-title">Dinosaur Kids Coloring Book</div>
+                    <div class="featured-description">Fun dinosaur adventures for ages 1-4</div>
+                    <div class="featured-stats">
+                        <div class="stat">Ages 1-4</div>
+                        <div class="stat">3,308 sold</div>
+                        <div class="stat">⭐ 4.8/5</div>
+                    </div>
+                    <a href="#" class="featured-button">View on Amazon</a>
+                </div>
+                
+                <!-- Featured Book 2 -->
+                <div class="featured-card">
+                    <div class="featured-badge">POPULAR</div>
+                    <div class="featured-cover"></div>
+                    <div class="featured-title">Dinosaur Toddler Coloring Book</div>
+                    <div class="featured-description">Simple designs perfect for toddlers</div>
+                    <div class="featured-stats">
+                        <div class="stat">Toddlers</div>
+                        <div class="stat">1,103 sold</div>
+                        <div class="stat">⭐ 4.7/5</div>
+                    </div>
+                    <a href="#" class="featured-button">View on Amazon</a>
+                </div>
+                
+                <!-- Featured Book 3 -->
+                <div class="featured-card">
+                    <div class="featured-badge">TRENDING</div>
+                    <div class="featured-cover"></div>
+                    <div class="featured-title">Spider Coloring Book For Kids</div>
+                    <div class="featured-description">Spider-themed fun for creative kids</div>
+                    <div class="featured-stats">
+                        <div class="stat">Kids</div>
+                        <div class="stat">127 sold</div>
+                        <div class="stat">⭐ 4.9/5</div>
+                    </div>
+                    <a href="#" class="featured-button">View on Amazon</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Coloring Books Category -->
+        <div class="category-section category-coloring">
+            <div class="category-header">
+                <div class="category-icon">🎨</div>
+                <div>
+                    <div class="category-title">COLORING BOOKS</div>
+                    <div class="category-description">Fun coloring adventures for all ages!</div>
+                </div>
+            </div>
+            
+            <div class="books-grid">
+                <div class="book-card">
+                    <div class="book-cover"></div>
+                    <div class="book-title">Dinosaur Kids Coloring Book</div>
+                    <div class="book-meta">Ages 1-4 • 3,308 sold</div>
+                    <a href="#" class="book-button">View on Amazon</a>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover"></div>
+                    <div class="book-title">Dinosaur Toddler Coloring Book</div>
+                    <div class="book-meta">Toddler • 1,103 sold</div>
+                    <a href="#" class="book-button">View on Amazon</a>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover"></div>
+                    <div class="book-title">Spider Coloring Book For Kids</div>
+                    <div class="book-meta">Kids • 127 sold</div>
+                    <a href="#" class="book-button">View on Amazon</a>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover"></div>
+                    <div class="book-title">Spider Coloring Book For Toddlers</div>
+                    <div class="book-meta">Toddler • 114 sold</div>
+                    <a href="#" class="book-button">View on Amazon</a>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover"></div>
+                    <div class="book-title">Birds Coloring Book</div>
+                    <div class="book-meta">All Ages • 263 sold</div>
+                    <a href="#" class="book-button">View on Amazon</a>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover"></div>
+                    <div class="book-title">Cute Pumpkin Toddler Coloring Book</div>
+                    <div class="book-meta">Toddler • 77 sold</div>
+                    <a href="#" class="book-button">View on Amazon</a>
+                </div>
