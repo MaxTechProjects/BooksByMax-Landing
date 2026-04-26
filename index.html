@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <!-- ============================================================
-       BooksByMax Designs — Phase 1: Foundation & Brand Identity
+       BooksByMax Designs — Phase 2: Book Data Engine
+       (Phase 1: Foundation & Brand Identity)
        ============================================================ -->
 
   <!-- Character Encoding & Viewport -->
@@ -307,286 +308,23 @@
           </p>
         </header>
 
-        <div class="featured-grid">
-
-          <!-- Featured Book 1: Dinosaur Kids Coloring Book -->
-          <article class="featured-card fade-in fade-in-delay-1" aria-label="Dinosaur Kids Coloring Book">
-            <div class="featured-card-badge">
-              <span class="badge badge--bestseller">Best Seller</span>
-            </div>
-            <div class="book-cover-wrap">
-              <img
-                src="assets/covers/dinosaur_kids_coloring.jpg"
-                alt="Dinosaur Kids Coloring Book cover — fun dinosaur illustrations for ages 1-4"
-                loading="lazy"
-                width="200"
-                height="264"
-              >
-            </div>
-            <h3 class="featured-card-title">Dinosaur Kids Coloring Book</h3>
-            <p class="featured-card-desc">Fun dinosaur adventures packed with bold, easy-to-color illustrations designed for young children ages 1–4.</p>
-            <div class="featured-card-meta">
-              <span class="meta-tag">🎨 Coloring Book</span>
-              <span class="meta-tag">Ages 1–4</span>
-              <span class="meta-tag">⭐ 4.8/5</span>
-            </div>
-            <div class="featured-card-actions">
-              <a href="https://www.amazon.com/dp/B0BHMP6L68" target="_blank" rel="noopener noreferrer" class="btn btn--amazon" aria-label="Buy Dinosaur Kids Coloring Book on Amazon US">
-                Buy on Amazon US
-              </a>
-              <a href="https://www.amazon.co.uk/dp/B0BHMP6L68" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm" aria-label="Buy on Amazon UK">
-                UK &nbsp;|&nbsp;
-              </a>
-            </div>
-          </article>
-
-          <!-- Featured Book 2: Prayer Journal For Women -->
-          <article class="featured-card fade-in fade-in-delay-2" aria-label="Prayer Journal For Women">
-            <div class="featured-card-badge">
-              <span class="badge badge--accent">Popular</span>
-            </div>
-            <div class="book-cover-wrap">
-              <img
-                src="assets/covers/prayer_journal_women.jpg"
-                alt="Prayer Journal For Women cover — guided prayer journal for spiritual reflection"
-                loading="lazy"
-                width="200"
-                height="264"
-              >
-            </div>
-            <h3 class="featured-card-title">Prayer Journal For Women</h3>
-            <p class="featured-card-desc">A beautifully structured guided prayer journal for daily spiritual reflection, gratitude, and personal growth.</p>
-            <div class="featured-card-meta">
-              <span class="meta-tag">📓 Journal</span>
-              <span class="meta-tag">Adults</span>
-              <span class="meta-tag">⭐ 4.7/5</span>
-            </div>
-            <div class="featured-card-actions">
-              <a href="https://www.amazon.com/dp/B0BKMLT5H7" target="_blank" rel="noopener noreferrer" class="btn btn--amazon" aria-label="Buy Prayer Journal For Women on Amazon US">
-                Buy on Amazon US
-              </a>
-              <a href="https://www.amazon.co.uk/dp/B0BKMLT5H7" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm" aria-label="Buy on Amazon UK">
-                UK &nbsp;|&nbsp;
-              </a>
-            </div>
-          </article>
-
-          <!-- Featured Book 3: Spider Coloring Book For Kids -->
-          <article class="featured-card fade-in fade-in-delay-3" aria-label="Spider Coloring Book For Kids">
-            <div class="featured-card-badge">
-              <span class="badge badge--new">Trending</span>
-            </div>
-            <div class="book-cover-wrap">
-              <img
-                src="assets/covers/spider_coloring_kids.jpg"
-                alt="Spider Coloring Book For Kids cover — spider-themed coloring pages for children"
-                loading="lazy"
-                width="200"
-                height="264"
-              >
-            </div>
-            <h3 class="featured-card-title">Spider Coloring Book For Kids</h3>
-            <p class="featured-card-desc">Exciting spider-themed coloring pages that spark creativity and imagination in kids of all ages.</p>
-            <div class="featured-card-meta">
-              <span class="meta-tag">🎨 Coloring Book</span>
-              <span class="meta-tag">Kids</span>
-              <span class="meta-tag">⭐ 4.9/5</span>
-            </div>
-            <div class="featured-card-actions">
-              <a href="https://www.amazon.com/dp/B0CLYGP96Q" target="_blank" rel="noopener noreferrer" class="btn btn--amazon" aria-label="Buy Spider Coloring Book For Kids on Amazon US">
-                Buy on Amazon US
-              </a>
-              <a href="https://www.amazon.co.uk/dp/B0CLYGP96Q" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm" aria-label="Buy on Amazon UK">
-                UK &nbsp;|&nbsp;
-              </a>
-            </div>
-          </article>
-
+        <!-- Book cards are injected here by books-engine.js from books.json -->
+        <div class="featured-grid" aria-live="polite" aria-label="Featured books">
+          <!-- Loading state: replaced by engine on DOMContentLoaded -->
+          <div class="books-loading" aria-label="Loading featured books">
+            <div class="books-loading-spinner" aria-hidden="true"></div>
+            <p>Loading featured books&hellip;</p>
+          </div>
         </div>
       </div>
     </section>
 
 
     <!-- ----------------------------------------------------------
-         COLORING BOOKS CATEGORY SECTION
+         CATEGORY SECTIONS — auto-generated by books-engine.js
+         from the 'categories' array in books.json.
+         To add a new category: add it to books.json only.
          ---------------------------------------------------------- -->
-    <section class="category-section category-section--coloring" id="coloring-books" aria-labelledby="coloring-heading">
-      <div class="container">
-
-        <div class="category-header fade-in">
-          <div class="category-icon-wrap" aria-hidden="true">🎨</div>
-          <div class="category-header-text">
-            <span class="category-label">Category</span>
-            <h2 class="category-name" id="coloring-heading">Coloring Books</h2>
-            <p class="category-desc">Bold, beautiful illustrations designed for little hands — from toddlers taking their first coloring steps to kids who love detailed scenes. Every page is an adventure.</p>
-            <span class="category-count">7 titles available</span>
-          </div>
-        </div>
-
-        <div class="books-grid">
-
-          <article class="book-card fade-in fade-in-delay-1" aria-label="Dinosaur Kids Coloring Book">
-            <div class="book-card-cover">
-              <img src="assets/covers/dinosaur_kids_coloring.jpg" alt="Dinosaur Kids Coloring Book" loading="lazy" width="160" height="210">
-            </div>
-            <h3 class="book-card-title">Dinosaur Kids Coloring Book</h3>
-            <p class="book-card-meta">Ages 1–4 &bull; Coloring Book</p>
-            <div class="book-card-actions">
-              <a href="https://www.amazon.com/dp/B0BHMP6L68" target="_blank" rel="noopener noreferrer" class="btn btn--amazon btn--sm" aria-label="Buy Dinosaur Kids Coloring Book on Amazon">View on Amazon</a>
-            </div>
-          </article>
-
-          <article class="book-card fade-in fade-in-delay-2" aria-label="Dinosaur Toddler Coloring Book">
-            <div class="book-card-cover">
-              <img src="assets/covers/dinosaur_toddler_coloring.jpg" alt="Dinosaur Toddler Coloring Book" loading="lazy" width="160" height="210">
-            </div>
-            <h3 class="book-card-title">Dinosaur Toddler Coloring Book</h3>
-            <p class="book-card-meta">Toddler &bull; Coloring Book</p>
-            <div class="book-card-actions">
-              <a href="https://www.amazon.com/dp/B0BHKLZ76D" target="_blank" rel="noopener noreferrer" class="btn btn--amazon btn--sm" aria-label="Buy Dinosaur Toddler Coloring Book on Amazon">View on Amazon</a>
-            </div>
-          </article>
-
-          <article class="book-card fade-in fade-in-delay-3" aria-label="Birds Coloring Book">
-            <div class="book-card-cover">
-              <img src="assets/covers/birds_coloring.jpg" alt="Birds Coloring Book" loading="lazy" width="160" height="210">
-            </div>
-            <h3 class="book-card-title">Birds Coloring Book</h3>
-            <p class="book-card-meta">All Ages &bull; Coloring Book</p>
-            <div class="book-card-actions">
-              <a href="https://www.amazon.com/dp/B0B5NP9T92" target="_blank" rel="noopener noreferrer" class="btn btn--amazon btn--sm" aria-label="Buy Birds Coloring Book on Amazon">View on Amazon</a>
-            </div>
-          </article>
-
-          <article class="book-card fade-in fade-in-delay-4" aria-label="Spider Coloring Book For Kids">
-            <div class="book-card-cover">
-              <img src="assets/covers/spider_coloring_kids.jpg" alt="Spider Coloring Book For Kids" loading="lazy" width="160" height="210">
-            </div>
-            <h3 class="book-card-title">Spider Coloring Book For Kids</h3>
-            <p class="book-card-meta">Kids &bull; Coloring Book</p>
-            <div class="book-card-actions">
-              <a href="https://www.amazon.com/dp/B0CLYGP96Q" target="_blank" rel="noopener noreferrer" class="btn btn--amazon btn--sm" aria-label="Buy Spider Coloring Book For Kids on Amazon">View on Amazon</a>
-            </div>
-          </article>
-
-          <article class="book-card fade-in fade-in-delay-1" aria-label="Spider Coloring Book For Toddlers">
-            <div class="book-card-cover">
-              <img src="assets/covers/spider_coloring_toddler.jpg" alt="Spider Coloring Book For Toddlers" loading="lazy" width="160" height="210">
-            </div>
-            <h3 class="book-card-title">Spider Coloring Book For Toddlers</h3>
-            <p class="book-card-meta">Toddler &bull; Coloring Book</p>
-            <div class="book-card-actions">
-              <a href="https://www.amazon.com/dp/B0CLYFWRS3" target="_blank" rel="noopener noreferrer" class="btn btn--amazon btn--sm" aria-label="Buy Spider Coloring Book For Toddlers on Amazon">View on Amazon</a>
-            </div>
-          </article>
-
-          <article class="book-card fade-in fade-in-delay-2" aria-label="Cute Pumpkin Toddler Coloring Book">
-            <div class="book-card-cover">
-              <img src="assets/covers/cute_pumpkin_toddler.jpg" alt="Cute Pumpkin Toddler Coloring Book" loading="lazy" width="160" height="210">
-            </div>
-            <h3 class="book-card-title">Cute Pumpkin Toddler Coloring Book</h3>
-            <p class="book-card-meta">Toddler &bull; Coloring Book</p>
-            <div class="book-card-actions">
-              <a href="https://www.amazon.com/dp/B0CJLCR92N" target="_blank" rel="noopener noreferrer" class="btn btn--amazon btn--sm" aria-label="Buy Cute Pumpkin Toddler Coloring Book on Amazon">View on Amazon</a>
-            </div>
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ----------------------------------------------------------
-         JOURNALS CATEGORY SECTION
-         ---------------------------------------------------------- -->
-    <section class="category-section category-section--journals" id="journals" aria-labelledby="journals-heading">
-      <div class="container">
-
-        <div class="category-header fade-in">
-          <div class="category-icon-wrap" aria-hidden="true">📓</div>
-          <div class="category-header-text">
-            <span class="category-label">Category</span>
-            <h2 class="category-name" id="journals-heading">Journals</h2>
-            <p class="category-desc">Thoughtfully designed guided journals to support prayer, reflection, and spiritual growth. Each journal provides structure and space for meaningful daily practice.</p>
-            <span class="category-count">2 titles available</span>
-          </div>
-        </div>
-
-        <div class="books-grid">
-
-          <article class="book-card fade-in fade-in-delay-1" aria-label="Sermon Notes Journal For Women">
-            <div class="book-card-cover">
-              <img src="assets/covers/sermon_notes_journal_women.jpg" alt="Sermon Notes Journal For Women" loading="lazy" width="160" height="210">
-            </div>
-            <h3 class="book-card-title">Sermon Notes Journal For Women</h3>
-            <p class="book-card-meta">Adults &bull; Journal</p>
-            <div class="book-card-actions">
-              <a href="https://www.amazon.com/dp/B0BKS5ZGGL" target="_blank" rel="noopener noreferrer" class="btn btn--amazon btn--sm" aria-label="Buy Sermon Notes Journal For Women on Amazon">View on Amazon</a>
-            </div>
-          </article>
-
-          <article class="book-card fade-in fade-in-delay-2" aria-label="Prayer Journal For Women">
-            <div class="book-card-cover">
-              <img src="assets/covers/prayer_journal_women.jpg" alt="Prayer Journal For Women" loading="lazy" width="160" height="210">
-            </div>
-            <h3 class="book-card-title">Prayer Journal For Women</h3>
-            <p class="book-card-meta">Adults &bull; Journal</p>
-            <div class="book-card-actions">
-              <a href="https://www.amazon.com/dp/B0BKMLT5H7" target="_blank" rel="noopener noreferrer" class="btn btn--amazon btn--sm" aria-label="Buy Prayer Journal For Women on Amazon">View on Amazon</a>
-            </div>
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ----------------------------------------------------------
-         COOKBOOKS CATEGORY SECTION
-         ---------------------------------------------------------- -->
-    <section class="category-section category-section--cookbooks" id="cookbooks" aria-labelledby="cookbooks-heading">
-      <div class="container">
-
-        <div class="category-header fade-in">
-          <div class="category-icon-wrap" aria-hidden="true">🍳</div>
-          <div class="category-header-text">
-            <span class="category-label">Category</span>
-            <h2 class="category-name" id="cookbooks-heading">Cookbooks &amp; Recipe Books</h2>
-            <p class="category-desc">From blank recipe journals to capture family favorites, to fun kids' cookbooks that make cooking an adventure — food and creativity go hand in hand.</p>
-            <span class="category-count">2 titles available</span>
-          </div>
-        </div>
-
-        <div class="books-grid">
-
-          <article class="book-card fade-in fade-in-delay-1" aria-label="Recipe Book Write Your Own">
-            <div class="book-card-cover">
-              <img src="assets/covers/recipe_book_write_your_own.jpg" alt="Recipe Book — Write Your Own" loading="lazy" width="160" height="210">
-            </div>
-            <h3 class="book-card-title">Recipe Book (Write Your Own)</h3>
-            <p class="book-card-meta">All Ages &bull; Journal / Cookbook</p>
-            <div class="book-card-actions">
-              <a href="https://www.amazon.com/dp/B0B32JFG3H" target="_blank" rel="noopener noreferrer" class="btn btn--amazon btn--sm" aria-label="Buy Recipe Book Write Your Own on Amazon">View on Amazon</a>
-            </div>
-          </article>
-
-          <article class="book-card fade-in fade-in-delay-2" aria-label="Kids Recipe Book / Cookbook">
-            <div class="book-card-cover">
-              <img src="assets/covers/kisa_recipe_book.jpg" alt="Kids Recipe Book / Cookbook" loading="lazy" width="160" height="210">
-            </div>
-            <h3 class="book-card-title">Kids Recipe Book / Cookbook</h3>
-            <p class="book-card-meta">Kids &bull; Cookbook</p>
-            <div class="book-card-actions">
-              <a href="https://www.amazon.com/dp/B0B31ZYGBQ" target="_blank" rel="noopener noreferrer" class="btn btn--amazon btn--sm" aria-label="Buy Kids Recipe Book on Amazon">View on Amazon</a>
-            </div>
-          </article>
-
-        </div>
-
-      </div>
-    </section>
 
 
     <!-- ----------------------------------------------------------
@@ -774,6 +512,9 @@
   <!-- ============================================================
        JAVASCRIPT — Minimal, no frameworks
        ============================================================ -->
+  <!-- Book Data Engine: loads books.json and renders all book cards -->
+  <script src="assets/js/books-engine.js"></script>
+  <!-- Site interactions: nav, scroll, animations -->
   <script src="assets/js/main.js"></script>
 
 </body>
