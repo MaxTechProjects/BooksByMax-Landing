@@ -348,17 +348,18 @@
 
     if (!desktopNav && !mobileNav) return;
 
-    // Build the dynamic category links (skip "Featured" — it's always first)
+    // Build the dynamic category links pointing to individual category pages
     const categoryLinks = categories
       .sort((a, b) => (a.display_order || 99) - (b.display_order || 99))
       .map(cat => ({
-        href: `#${cat.id}`,
+        href: `${cat.id}.html`,
         label: cat.label
       }));
 
     const allLinks = [
       { href: '#featured', label: 'Featured' },
       ...categoryLinks,
+      { href: '#testimonials', label: 'Reviews' },
       { href: '#about', label: 'About' }
     ];
 
@@ -640,11 +641,11 @@
 
     const staticLinks = [
       { href: '#featured', label: 'Featured Titles' },
-      { href: 'https://www.amazon.com/s?k=BooksByMax', label: 'All Books on Amazon', external: true }
+      { href: 'https://www.amazon.com/stores/author/B0BCD3DT9N', label: 'All Books on Amazon', external: true }
     ];
 
     const catLinks = sortedCats.map(cat => ({
-      href: `#${cat.id}`,
+      href: `${cat.id}.html`,
       label: cat.label
     }));
 
