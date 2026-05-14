@@ -1,0 +1,30 @@
+/* ============================================================
+   ALTERNATIVE THEME 2: Sunset Imagination
+   Deep purple/violet + warm sunset orange accent
+   Evokes magic, imagination, and storytelling
+   ============================================================ */
+:root {
+  /* Primary: Rich purple/violet */
+  --color-primary-900: #2e1065;
+  --color-primary-800: #3b0764;
+  --color-primary-700: #6b21a8;
+  --color-primary-600: #7c3aed;
+  --color-primary-500: #8b5cf6;
+  --color-primary-400: #a78bfa;
+  --color-primary-300: #c4b5fd;
+  --color-primary-200: #ddd6fe;
+  --color-primary-100: #ede9fe;
+  --color-primary-50:  #f5f3ff;
+
+  /* Accent: Warm sunset orange */
+  --color-accent-900: #7c2d12;
+  --color-accent-800: #9a3412;
+  --color-accent-700: #c2410c;
+  --color-accent-600: #ea580c;
+  --color-accent-500: #f97316;
+  --color-accent-400: #fb923c;
+  --color-accent-300: #fdba74;
+  --color-accent-200: #fed7aa;
+  --color-accent-100: #ffedd5;
+  --color-accent-50:  #fff7ed;
+}

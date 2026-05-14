@@ -1,0 +1,24 @@
+/* Purple + Lime/Chartreuse Green */
+:root {
+  --color-primary-900: #2e1065;
+  --color-primary-800: #3b0764;
+  --color-primary-700: #6b21a8;
+  --color-primary-600: #7c3aed;
+  --color-primary-500: #8b5cf6;
+  --color-primary-400: #a78bfa;
+  --color-primary-300: #c4b5fd;
+  --color-primary-200: #ddd6fe;
+  --color-primary-100: #ede9fe;
+  --color-primary-50:  #f5f3ff;
+
+  --color-accent-900: #365314;
+  --color-accent-800: #3f6212;
+  --color-accent-700: #4d7c0f;
+  --color-accent-600: #65a30d;
+  --color-accent-500: #84cc16;
+  --color-accent-400: #a3e635;
+  --color-accent-300: #bef264;
+  --color-accent-200: #d9f99d;
+  --color-accent-100: #ecfccb;
+  --color-accent-50:  #f7fee7;
+}

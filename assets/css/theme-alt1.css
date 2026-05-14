@@ -1,0 +1,30 @@
+/* ============================================================
+   ALTERNATIVE THEME 1: Playful Rainbow Garden
+   Fresh greens + vibrant coral/pink accent
+   Evokes creativity, nature, and childhood wonder
+   ============================================================ */
+:root {
+  /* Primary: Rich forest green */
+  --color-primary-900: #064e3b;
+  --color-primary-800: #065f46;
+  --color-primary-700: #047857;
+  --color-primary-600: #059669;
+  --color-primary-500: #10b981;
+  --color-primary-400: #34d399;
+  --color-primary-300: #6ee7b7;
+  --color-primary-200: #a7f3d0;
+  --color-primary-100: #d1fae5;
+  --color-primary-50:  #ecfdf5;
+
+  /* Accent: Vibrant coral/pink */
+  --color-accent-900: #881337;
+  --color-accent-800: #9f1239;
+  --color-accent-700: #be123c;
+  --color-accent-600: #e11d48;
+  --color-accent-500: #f43f5e;
+  --color-accent-400: #fb7185;
+  --color-accent-300: #fda4af;
+  --color-accent-200: #fecdd3;
+  --color-accent-100: #ffe4e6;
+  --color-accent-50:  #fff1f2;
+}

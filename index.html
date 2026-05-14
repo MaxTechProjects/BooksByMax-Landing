@@ -1,494 +1,544 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BooksByMax - Fun Activity Books for Kids</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Comic Neue', cursive, sans-serif;
-            background: linear-gradient(135deg, #fefcbf 0%, #f6e05e 100%);
-            color: #2d3748;
-            line-height: 1.6;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+  <!-- ============================================================
+       BooksByMax Designs — Phase 6: Domain Readiness & Launch Polish
+       ============================================================ -->
+
+  <!-- Character Encoding & Viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Primary Meta Tags -->
+  <title>BooksByMax Designs — Creative Books for Every Reader</title>
+  <meta name="description" content="Discover beautifully crafted books by Max — coloring books for kids and toddlers, guided journals for women, recipe books, and cookbooks. Available on Amazon worldwide.">
+  <meta name="author" content="BooksByMax Designs">
+  <meta name="keywords" content="coloring books, kids coloring books, toddler coloring books, journals for women, prayer journal, sermon notes journal, recipe book, cookbook, BooksByMax">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#6b21a8">
+
+  <!-- Canonical URL (update when custom domain is connected) -->
+  <link rel="canonical" href="https://maxtechprojects.github.io/BooksByMax-Landing/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://maxtechprojects.github.io/BooksByMax-Landing/">
+  <meta property="og:title" content="BooksByMax Designs — Creative Books for Every Reader">
+  <meta property="og:description" content="Discover beautifully crafted books by Max — coloring books for kids and toddlers, guided journals for women, recipe books, and cookbooks. Available on Amazon worldwide.">
+  <meta property="og:image" content="https://maxtechprojects.github.io/BooksByMax-Landing/assets/covers/dinosaur_kids_coloring.jpg">
+  <meta property="og:image:alt" content="BooksByMax Designs — Creative Books for Every Reader">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="BooksByMax Designs">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://maxtechprojects.github.io/BooksByMax-Landing/">
+  <meta name="twitter:title" content="BooksByMax Designs — Creative Books for Every Reader">
+  <meta name="twitter:description" content="Discover beautifully crafted books by Max — coloring books for kids and toddlers, guided journals for women, recipe books, and cookbooks. Available on Amazon worldwide.">
+  <meta name="twitter:image" content="https://maxtechprojects.github.io/BooksByMax-Landing/assets/covers/dinosaur_kids_coloring.jpg">
+  <meta name="twitter:image:alt" content="BooksByMax Designs book covers">
+
+  <!-- Favicon (SVG inline + fallback) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236b21a8'/><text y='.9em' font-size='70' x='50%' text-anchor='middle' fill='white' font-family='serif' font-weight='bold'>B</text></svg>">
+  <link rel="alternate icon" href="assets/icons/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <meta name="msapplication-TileColor" content="#6b21a8">
+
+  <!-- Google Fonts — preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Nunito:wght@300;400;500;600;700;800&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Google Analytics (replace GA_MEASUREMENT_ID with your actual ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://maxtechprojects.github.io/BooksByMax-Landing/#website",
+        "url": "https://maxtechprojects.github.io/BooksByMax-Landing/",
+        "name": "BooksByMax Designs",
+        "description": "Creative books for every reader — coloring books, journals, cookbooks, and more.",
+        "publisher": {
+          "@id": "https://maxtechprojects.github.io/BooksByMax-Landing/#person"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.amazon.com/s?k=BooksByMax"
+          },
+          "query-input": "required name=search_term_string"
         }
-        .container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            padding: 30px;
-            margin: 20px 0;
-            border: 5px solid #4299e1;
-        }
-        
-        /* Header */
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .brand-name {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: #4299e1;
-            margin-bottom: 10px;
-        }
-        .brand-tagline {
-            font-size: 1.8rem;
-            color: #ed8936;
-            margin-bottom: 30px;
-        }
-        
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 40px;
-            background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
-            color: white;
-            border-radius: 15px;
-            margin-bottom: 50px;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-        .hero-cta {
-            display: inline-block;
-            background: #ed8936;
-            color: white;
-            padding: 15px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.2rem;
-            transition: all 0.3s;
-        }
-        .hero-cta:hover {
-            background: #dd6b20;
-            transform: scale(1.05);
-        }
-        
-        /* Featured Section */
-        .featured-section {
-            margin: 60px 0;
-            text-align: center;
-        }
-        .section-title {
-            font-size: 2.5rem;
-            color: #4299e1;
-            margin-bottom: 40px;
-            font-weight: 700;
-            position: relative;
-            display: inline-block;
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 5px;
-            background: #f6e05e;
-            border-radius: 5px;
-        }
-        .featured-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-        .featured-card {
-            background: white;
-            border-radius: 20px;
-            padding: 25px;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-            transition: all 0.3s;
-            border: 3px solid transparent;
-            position: relative;
-            overflow: hidden;
-        }
-        .featured-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-            border-color: #4299e1;
-        }
-        .featured-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: #ed8936;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: 700;
-            font-size: 0.9rem;
-        }
-        .featured-cover {
-            width: 200px;
-            height: 260px;
-            background: #e2e8f0;
-            margin: 0 auto 20px;
-            border-radius: 15px;
-            position: relative;
-            overflow: hidden;
-            border: 5px solid #f6e05e;
-        }
-        .featured-cover::after {
-            content: '📚';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 4rem;
-            opacity: 0.2;
-        }
-        .featured-title {
-            font-weight: 700;
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: #2d3748;
-        }
-        .featured-description {
-            color: #718096;
-            margin-bottom: 15px;
-            font-size: 1rem;
-        }
-        .featured-stats {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 15px 0;
-            flex-wrap: wrap;
-        }
-        .stat {
-            background: #edf2f7;
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-size: 0.9rem;
-            color: #718096;
-        }
-        .featured-button {
-            display: inline-block;
-            padding: 10px 30px;
-            background: #4299e1;
-            color: white;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1rem;
-            transition: background 0.2s;
-            margin-top: 10px;
-        }
-        .featured-button:hover {
-            background: #3182ce;
-        }
-        
-        /* Category Sections */
-        .category-section {
-            margin: 80px 0;
-            padding: 40px;
-            border-radius: 20px;
-            position: relative;
-        }
-        .category-header {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 4px solid;
-        }
-        .category-icon {
-            font-size: 3.5rem;
-            background: white;
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-            border: 4px solid;
-        }
-        .category-title {
-            font-size: 2.8rem;
-            font-weight: 700;
-        }
-        .category-description {
-            font-size: 1.3rem;
-            color: #718096;
-            margin-top: 10px;
-        }
-        
-        .category-coloring {
-            background: #ebf8ff;
-            border: 4px solid #4299e1;
-        }
-        .category-coloring .category-header {
-            border-color: #4299e1;
-        }
-        .category-coloring .category-icon {
-            border-color: #4299e1;
-            color: #4299e1;
-        }
-        
-        .category-journals {
-            background: #fffaf0;
-            border: 4px solid #f6e05e;
-        }
-        .category-journals .category-header {
-            border-color: #f6e05e;
-        }
-        .category-journals .category-icon {
-            border-color: #f6e05e;
-            color: #d69e2e;
-        }
-        
-        .category-cookbooks {
-            background: #feebc8;
-            border: 4px solid #ed8936;
-        }
-        .category-cookbooks .category-header {
-            border-color: #ed8936;
-        }
-        .category-cookbooks .category-icon {
-            border-color: #ed8936;
-            color: #ed8936;
-        }
-        
-        /* Books Grid */
-        .books-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 30px;
-        }
-        .book-card {
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: all 0.3s;
-            border: 2px solid transparent;
-        }
-        .book-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-        }
-        .book-cover {
-            width: 160px;
-            height: 210px;
-            background: #e2e8f0;
-            margin: 0 auto 15px;
-            border-radius: 10px;
-            position: relative;
-            overflow: hidden;
-        }
-        .book-cover::after {
-            content: '📖';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 3rem;
-            opacity: 0.3;
-        }
-        .book-title {
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-            color: #2d3748;
-        }
-        .book-meta {
-            font-size: 0.9rem;
-            color: #718096;
-            margin-bottom: 12px;
-        }
-        .book-button {
-            display: inline-block;
-            padding: 8px 20px;
-            background: #4299e1;
-            color: white;
-            border-radius: 20px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: background 0.2s;
-        }
-        .book-button:hover {
-            background: #3182ce;
-        }
-        
-        /* Author Section */
-        .author-section {
-            background: linear-gradient(135deg, #4299e1, #f6e05e);
-            color: white;
-            padding: 50px;
-            border-radius: 20px;
-            margin-top: 80px;
-            text-align: center;
-        }
-        .author-section h2 {
-            font-size: 2.8rem;
-            margin-bottom: 25px;
-        }
-        .author-bio {
-            max-width: 800px;
-            margin: 0 auto 30px;
-            font-size: 1.3rem;
-            line-height: 1.8;
-        }
-        .contact-info {
-            font-size: 1.2rem;
-            margin-top: 20px;
-            opacity: 0.9;
-        }
-        
-        /* Footer */
-        .footer {
-            text-align: center;
-            margin-top: 60px;
-            padding-top: 30px;
-            border-top: 2px solid #e2e8f0;
-            color: #718096;
-            font-size: 0.9rem;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .brand-name { font-size: 2.5rem; }
-            .hero h1 { font-size: 2.2rem; }
-            .hero p { font-size: 1.2rem; }
-            .section-title { font-size: 2rem; }
-            .category-title { font-size: 2rem; }
-            .category-header { flex-direction: column; text-align: center; gap: 15px; }
-            .category-icon { width: 70px; height: 70px; font-size: 2.5rem; }
-            .featured-grid, .books-grid {
-                grid-template-columns: 1fr;
+      },
+      {
+        "@type": "Person",
+        "@id": "https://maxtechprojects.github.io/BooksByMax-Landing/#person",
+        "name": "Max",
+        "url": "https://maxtechprojects.github.io/BooksByMax-Landing/",
+        "description": "Independent author and designer creating coloring books, journals, and cookbooks for readers of all ages.",
+        "sameAs": [
+          "https://www.amazon.com/author/booksByMax"
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "name": "BooksByMax Featured Books",
+        "description": "Top-selling books by BooksByMax Designs available on Amazon",
+        "url": "https://maxtechprojects.github.io/BooksByMax-Landing/#featured",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "Book",
+              "name": "Dinosaur Kids Coloring Book (Ages 1-4)",
+              "author": { "@id": "https://maxtechprojects.github.io/BooksByMax-Landing/#person" },
+              "url": "https://www.amazon.com/dp/B0BHMP6L68",
+              "isbn": "B0BHMP6L68",
+              "genre": "Coloring Book",
+              "audience": { "@type": "Audience", "audienceType": "Children Ages 1-4" }
             }
-        }
-    </style>
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "Book",
+              "name": "Dinosaur Toddler Coloring Book",
+              "author": { "@id": "https://maxtechprojects.github.io/BooksByMax-Landing/#person" },
+              "url": "https://www.amazon.com/dp/B0BHKLZ76D",
+              "isbn": "B0BHKLZ76D",
+              "genre": "Coloring Book",
+              "audience": { "@type": "Audience", "audienceType": "Toddlers" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "Book",
+              "name": "Spider Coloring Book For Kids",
+              "author": { "@id": "https://maxtechprojects.github.io/BooksByMax-Landing/#person" },
+              "url": "https://www.amazon.com/dp/B0CLYGP96Q",
+              "isbn": "B0CLYGP96Q",
+              "genre": "Coloring Book",
+              "audience": { "@type": "Audience", "audienceType": "Children" }
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
+
 <body>
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <div class="brand-name">BooksByMax</div>
-            <div class="brand-tagline">Fun Activity Books for Kids! 🎨</div>
+
+  <!-- ============================================================
+       SKIP NAVIGATION (Accessibility)
+       ============================================================ -->
+  <a href="#main-content" class="sr-only" style="position:fixed;top:0;left:0;z-index:9999;padding:1rem 1.5rem;background:var(--color-primary-700);color:white;border-radius:0 0 var(--radius-lg) 0;font-weight:700;text-decoration:none;transform:translateY(-100%);transition:transform 0.2s;" onfocus="this.style.transform='translateY(0)'" onblur="this.style.transform='translateY(-100%)'">Skip to main content</a>
+
+
+  <!-- ============================================================
+       STICKY NAVIGATION
+       ============================================================ -->
+  <header role="banner">
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav-inner">
+
+          <!-- Brand -->
+          <a href="#" class="nav-brand" aria-label="BooksByMax Designs — Home">
+            <div class="nav-brand-icon" aria-hidden="true">B</div>
+            <div class="nav-brand-text">
+              <span class="nav-brand-name">BooksByMax</span>
+              <span class="nav-brand-sub">Designs</span>
+            </div>
+          </a>
+
+          <!-- Desktop navigation links -->
+          <ul class="nav-links" role="list">
+            <li><a href="#featured" class="nav-link">Featured</a></li>
+            <li><a href="#coloring-books" class="nav-link">Coloring Books</a></li>
+            <li><a href="#coloring-story-books" class="nav-link">Story Books</a></li>
+            <li><a href="#journals" class="nav-link">Journals</a></li>
+            <li><a href="#cookbooks" class="nav-link">Cookbooks</a></li>
+            <li><a href="#notebooks" class="nav-link">Notebooks</a></li>
+            <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+          </ul>
+
+          <!-- Desktop CTA -->
+          <div class="nav-cta">
+            <a href="https://www.amazon.com/s?k=BooksByMax" target="_blank" rel="noopener noreferrer" class="btn btn--accent btn--sm" aria-label="Shop all BooksByMax books on Amazon">
+              Shop on Amazon
+            </a>
+          </div>
+
+          <!-- Hamburger (mobile) -->
+          <button
+            class="nav-hamburger"
+            id="nav-hamburger"
+            aria-label="Toggle mobile menu"
+            aria-expanded="false"
+            aria-controls="nav-mobile-menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
         </div>
-        
-        <!-- Hero Section -->
-        <div class="hero">
-            <h1>Welcome to BooksByMax!</h1>
-            <p>Discover fun, educational books that spark creativity and learning in young minds</p>
-            <a href="#featured" class="hero-cta">Explore Featured Books</a>
-        </div>
-        
-        <!-- Featured Section -->
-        <div class="featured-section" id="featured">
-            <h2 class="section-title">🌟 FEATURED BOOKS 🌟</h2>
-            <p style="font-size: 1.2rem; color: #718096; max-width: 800px; margin: 0 auto 30px;">
-                Our most popular titles loved by thousands of kids and parents!
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="nav-mobile-menu" id="nav-mobile-menu" role="navigation" aria-label="Mobile navigation" aria-hidden="true">
+      <ul class="nav-mobile-links" role="list">
+        <li><a href="#featured" class="nav-mobile-link">Featured Books</a></li>
+        <li><a href="#coloring-books" class="nav-mobile-link">Coloring Books</a></li>
+        <li><a href="#coloring-story-books" class="nav-mobile-link">Coloring & Story Books</a></li>
+        <li><a href="#journals" class="nav-mobile-link">Journals</a></li>
+        <li><a href="#cookbooks" class="nav-mobile-link">Cookbooks</a></li>
+        <li><a href="#notebooks" class="nav-mobile-link">Notebooks</a></li>
+        <li><a href="#testimonials" class="nav-mobile-link">Reviews</a></li>
+        <li><a href="#about" class="nav-mobile-link">About Max</a></li>
+      </ul>
+      <a href="https://www.amazon.com/s?k=BooksByMax" target="_blank" rel="noopener noreferrer" class="btn btn--accent" style="width:100%;justify-content:center;">
+        Shop All Books on Amazon
+      </a>
+    </div>
+  </header>
+
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main id="main-content">
+
+    <!-- ----------------------------------------------------------
+         HERO SECTION
+         ---------------------------------------------------------- -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-inner">
+
+          <!-- Hero text content -->
+          <div class="hero-content">
+            <span class="hero-eyebrow">Welcome to BooksByMax Designs</span>
+
+            <h1 class="hero-title" id="hero-heading">
+              Creative Books
+              <span class="hero-title-accent">for Every Reader</span>
+            </h1>
+
+            <!-- Category pills -->
+            <div class="hero-categories" aria-label="Book categories">
+              <span class="hero-category-pill">🎨 Coloring Books</span>
+              <span class="hero-category-pill">📓 Journals</span>
+              <span class="hero-category-pill">🍳 Cookbooks</span>
+              <span class="hero-category-pill">✨ &amp; More</span>
+            </div>
+
+            <p class="hero-subtitle">
+              From vibrant coloring books that spark creativity in little ones, to guided journals for spiritual reflection and blank recipe books to capture family traditions — every book is crafted with care and available on Amazon worldwide.
             </p>
-            
-            <div class="featured-grid">
-                <!-- Featured Book 1 -->
-                <div class="featured-card">
-                    <div class="featured-badge">BEST SELLER</div>
-                    <div class="featured-cover"></div>
-                    <div class="featured-title">Dinosaur Kids Coloring Book</div>
-                    <div class="featured-description">Fun dinosaur adventures for ages 1-4</div>
-                    <div class="featured-stats">
-                        <div class="stat">Ages 1-4</div>
-                        <div class="stat">3,308 sold</div>
-                        <div class="stat">⭐ 4.8/5</div>
-                    </div>
-                    <a href="#" class="featured-button">View on Amazon</a>
-                </div>
-                
-                <!-- Featured Book 2 -->
-                <div class="featured-card">
-                    <div class="featured-badge">POPULAR</div>
-                    <div class="featured-cover"></div>
-                    <div class="featured-title">Dinosaur Toddler Coloring Book</div>
-                    <div class="featured-description">Simple designs perfect for toddlers</div>
-                    <div class="featured-stats">
-                        <div class="stat">Toddlers</div>
-                        <div class="stat">1,103 sold</div>
-                        <div class="stat">⭐ 4.7/5</div>
-                    </div>
-                    <a href="#" class="featured-button">View on Amazon</a>
-                </div>
-                
-                <!-- Featured Book 3 -->
-                <div class="featured-card">
-                    <div class="featured-badge">TRENDING</div>
-                    <div class="featured-cover"></div>
-                    <div class="featured-title">Spider Coloring Book For Kids</div>
-                    <div class="featured-description">Spider-themed fun for creative kids</div>
-                    <div class="featured-stats">
-                        <div class="stat">Kids</div>
-                        <div class="stat">127 sold</div>
-                        <div class="stat">⭐ 4.9/5</div>
-                    </div>
-                    <a href="#" class="featured-button">View on Amazon</a>
-                </div>
+
+            <div class="hero-actions">
+              <a href="#featured" class="btn btn--accent btn--lg">
+                Explore Featured Books
+              </a>
+              <a href="https://www.amazon.com/s?k=BooksByMax" target="_blank" rel="noopener noreferrer" class="btn btn--outline-light btn--lg">
+                View All on Amazon
+              </a>
             </div>
+
+            <!-- Quick stats -->
+            <div class="hero-stats" aria-label="BooksByMax at a glance">
+              <div class="hero-stat">
+                <span class="hero-stat-number">100+</span>
+                <span class="hero-stat-label">Published Titles</span>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-number">4</span>
+                <span class="hero-stat-label">Book Categories</span>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-number">4</span>
+                <span class="hero-stat-label">Amazon Stores</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero visual: stacked book covers -->
+          <div class="hero-visual" aria-hidden="true">
+            <div class="hero-books-stack">
+              <div class="hero-book hero-book--1">
+                <img src="assets/covers/dinosaur_kids_coloring.jpg" alt="Dinosaur Kids Coloring Book cover" loading="eager">
+              </div>
+              <div class="hero-book hero-book--2">
+                <img src="assets/covers/prayer_journal_women.jpg" alt="Prayer Journal For Women cover" loading="eager">
+              </div>
+              <div class="hero-book hero-book--3">
+                <img src="assets/covers/kisa_recipe_book.jpg" alt="Kids Recipe Book cover" loading="eager">
+              </div>
+            </div>
+          </div>
+
         </div>
-        
-        <!-- Coloring Books Category -->
-        <div class="category-section category-coloring">
-            <div class="category-header">
-                <div class="category-icon">🎨</div>
-                <div>
-                    <div class="category-title">COLORING BOOKS</div>
-                    <div class="category-description">Fun coloring adventures for all ages!</div>
-                </div>
+      </div>
+    </section>
+
+
+    <!-- ----------------------------------------------------------
+         FEATURED BOOKS SECTION
+         ---------------------------------------------------------- -->
+    <section class="featured-section section" id="featured" aria-labelledby="featured-heading">
+      <div class="container">
+
+        <header class="section-header fade-in">
+          <span class="section-eyebrow">Top Picks</span>
+          <h2 class="section-title" id="featured-heading">Featured Books</h2>
+          <p class="section-subtitle">
+            Our most-loved titles — bestsellers and reader favorites across every category, available on Amazon US, UK, Canada, and Australia.
+          </p>
+        </header>
+
+        <!-- Book cards are injected here by books-engine.js from books.json -->
+        <div class="featured-grid" aria-live="polite" aria-label="Featured books">
+          <!-- Loading state: replaced by engine on DOMContentLoaded -->
+          <div class="books-loading" aria-label="Loading featured books">
+            <div class="books-loading-spinner" aria-hidden="true"></div>
+            <p>Loading featured books&hellip;</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ----------------------------------------------------------
+         CATEGORY SECTIONS — auto-generated by books-engine.js
+         from the 'categories' array in books.json.
+         To add a new category: add it to books.json only.
+         ---------------------------------------------------------- -->
+
+
+    <!-- ----------------------------------------------------------
+         ABOUT / AUTHOR SECTION
+         ---------------------------------------------------------- -->
+    <section class="about-section section--lg" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-inner">
+
+          <!-- Visual -->
+          <div class="about-visual fade-in">
+            <div class="about-avatar-wrap">
+              <div class="about-avatar" aria-label="Author avatar placeholder">
+                <!-- Replace with actual author photo: <img src="assets/author-photo.jpg" alt="Max, author of BooksByMax Designs"> -->
+                ✍️
+              </div>
+              <span class="about-avatar-badge">Independent Author</span>
             </div>
-            
-            <div class="books-grid">
-                <div class="book-card">
-                    <div class="book-cover"></div>
-                    <div class="book-title">Dinosaur Kids Coloring Book</div>
-                    <div class="book-meta">Ages 1-4 • 3,308 sold</div>
-                    <a href="#" class="book-button">View on Amazon</a>
-                </div>
-                <div class="book-card">
-                    <div class="book-cover"></div>
-                    <div class="book-title">Dinosaur Toddler Coloring Book</div>
-                    <div class="book-meta">Toddler • 1,103 sold</div>
-                    <a href="#" class="book-button">View on Amazon</a>
-                </div>
-                <div class="book-card">
-                    <div class="book-cover"></div>
-                    <div class="book-title">Spider Coloring Book For Kids</div>
-                    <div class="book-meta">Kids • 127 sold</div>
-                    <a href="#" class="book-button">View on Amazon</a>
-                </div>
-                <div class="book-card">
-                    <div class="book-cover"></div>
-                    <div class="book-title">Spider Coloring Book For Toddlers</div>
-                    <div class="book-meta">Toddler • 114 sold</div>
-                    <a href="#" class="book-button">View on Amazon</a>
-                </div>
-                <div class="book-card">
-                    <div class="book-cover"></div>
-                    <div class="book-title">Birds Coloring Book</div>
-                    <div class="book-meta">All Ages • 263 sold</div>
-                    <a href="#" class="book-button">View on Amazon</a>
-                </div>
-                <div class="book-card">
-                    <div class="book-cover"></div>
-                    <div class="book-title">Cute Pumpkin Toddler Coloring Book</div>
-                    <div class="book-meta">Toddler • 77 sold</div>
-                    <a href="#" class="book-button">View on Amazon</a>
-                </div>
+          </div>
+
+          <!-- Content -->
+          <div class="about-content fade-in fade-in-delay-2">
+            <span class="about-content-eyebrow">Meet the Author</span>
+            <h2 class="about-content-title" id="about-heading">
+              Hi, I'm Max
+            </h2>
+            <div class="about-content-body">
+              <p>
+                I create books that bring joy, spark creativity, and make meaningful moments — whether that's a toddler discovering their favorite colors, a child lost in an imaginative world, or a woman deepening her spiritual practice through guided journaling.
+              </p>
+              <p>
+                Every book in the BooksByMax Designs catalog is crafted with intention: thoughtful layouts, quality content, and a genuine desire to add something valuable to your bookshelf. From my first dinosaur coloring book to guided prayer journals and family recipe books, each title reflects a passion for creative, purposeful design.
+              </p>
+              <p>
+                With thousands of copies sold across four Amazon marketplaces, I'm grateful for every reader who has welcomed a BooksByMax title into their home. New books are always in the works — follow along to see what's next!
+              </p>
+            </div>
+
+            <!-- Quick highlights -->
+            <div class="about-highlights">
+              <div class="about-highlight">
+                <span class="about-highlight-number">5,500+</span>
+                <span class="about-highlight-label">Books Sold</span>
+              </div>
+              <div class="about-highlight">
+                <span class="about-highlight-number">4</span>
+                <span class="about-highlight-label">Amazon Marketplaces</span>
+              </div>
+              <div class="about-highlight">
+                <span class="about-highlight-number">5</span>
+                <span class="about-highlight-label">Book Categories</span>
+              </div>
+              <div class="about-highlight">
+                <span class="about-highlight-number">∞</span>
+                <span class="about-highlight-label">More Coming Soon</span>
+              </div>
+            </div>
+
+            <div class="about-actions">
+              <a href="https://www.amazon.com/stores/BooksByMax-Designs/author/B0BCD3DT9N" target="_blank" rel="noopener noreferrer" class="btn btn--accent btn--lg">
+                Visit My Amazon Author Page
+              </a>
+              <a href="mailto:contact@booksByMax.com" class="btn btn--outline-light">
+                Get in Touch
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ----------------------------------------------------------
+         CTA / NEWSLETTER BANNER
+         ---------------------------------------------------------- -->
+    <section class="cta-banner" aria-labelledby="cta-heading">
+      <div class="container">
+        <span class="cta-banner-eyebrow">Stay in the Loop</span>
+        <h2 class="cta-banner-title" id="cta-heading">New Books Coming Soon</h2>
+        <p class="cta-banner-subtitle">
+          Be the first to know when new titles drop — from new coloring adventures to journals and beyond.
+        </p>
+        <form class="cta-form" action="#" method="post" aria-label="Email signup form" onsubmit="return false;">
+          <label for="email-signup" class="sr-only">Your email address</label>
+          <input
+            type="email"
+            id="email-signup"
+            name="email"
+            class="cta-form-input"
+            placeholder="Enter your email address"
+            autocomplete="email"
+            required
+            aria-required="true"
+          >
+          <button type="submit" class="btn btn--primary">Notify Me</button>
+        </form>
+        <span class="cta-form-note">No spam, ever. Unsubscribe anytime.</span>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer" role="contentinfo" aria-label="Site footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <div>
+            <div class="footer-brand-name">BooksByMax</div>
+            <div class="footer-brand-sub">Designs</div>
+          </div>
+          <p class="footer-brand-desc">
+            Creative books for every reader — coloring books, guided journals, cookbooks, and more. Crafted with care, available on Amazon worldwide.
+          </p>
+          <div class="footer-social" aria-label="Social media links">
+            <a href="https://www.amazon.com/s?k=BooksByMax" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="BooksByMax on Amazon" title="Amazon Author Page">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.7-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.074-1.047-.872-1.234-1.276-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.66 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.891 5.942-1.095v-.41c0-.753.06-1.642-.384-2.294-.385-.579-1.124-.82-1.775-.82-1.205 0-2.277.618-2.54 1.897-.054.285-.261.567-.549.582l-3.061-.333c-.259-.056-.548-.266-.472-.66C5.497 1.99 8.476 1 11.14 1c1.401 0 3.231.373 4.334 1.435 1.401 1.311 1.267 3.059 1.267 4.963v4.496c0 1.353.561 1.948 1.089 2.678.186.262.226.575-.009.769l-2.677 2.454zm3.856 2.205C19.6 21.245 17.3 22 15.34 22c-2.661 0-5.055-.985-6.862-2.619-.142-.128-.015-.303.156-.203 1.954 1.137 4.369 1.82 6.865 1.82 1.684 0 3.537-.349 5.241-1.072.257-.109.473.169.26.374zm.543-1.747c-.194-.249-1.282-.118-1.77-.059-.149.018-.172-.112-.038-.206.867-.611 2.29-.434 2.456-.23.167.207-.044 1.635-.858 2.317-.125.105-.244.049-.188-.089.183-.457.594-1.484.398-1.733z"/></svg>
+            </a>
+            <!-- Placeholder social links — update with real URLs -->
+            <a href="#" class="footer-social-link" aria-label="BooksByMax on Instagram" title="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Books column -->
+        <nav aria-label="Book categories">
+          <h3 class="footer-col-title">Books</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="#coloring-books" class="footer-link">Coloring Books</a></li>
+            <li><a href="#coloring-story-books" class="footer-link">Coloring & Story Books</a></li>
+            <li><a href="#journals" class="footer-link">Journals</a></li>
+            <li><a href="#cookbooks" class="footer-link">Cookbooks</a></li>
+            <li><a href="#notebooks" class="footer-link">Notebooks</a></li>
+            <li><a href="#featured" class="footer-link">Featured Titles</a></li>
+            <li><a href="https://www.amazon.com/s?k=BooksByMax" target="_blank" rel="noopener noreferrer" class="footer-link">All Books on Amazon</a></li>
+          </ul>
+        </nav>
+
+        <!-- Amazon stores column -->
+        <nav aria-label="Amazon stores">
+          <h3 class="footer-col-title">Shop Worldwide</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="https://www.amazon.com/s?k=BooksByMax" target="_blank" rel="noopener noreferrer" class="footer-link">Amazon US 🇺🇸</a></li>
+            <li><a href="https://www.amazon.co.uk/s?k=BooksByMax" target="_blank" rel="noopener noreferrer" class="footer-link">Amazon UK 🇬🇧</a></li>
+            <li><a href="https://www.amazon.ca/s?k=BooksByMax" target="_blank" rel="noopener noreferrer" class="footer-link">Amazon CA 🇨🇦</a></li>
+            <li><a href="https://www.amazon.com.au/s?k=BooksByMax" target="_blank" rel="noopener noreferrer" class="footer-link">Amazon AU 🇦🇺</a></li>
+          </ul>
+        </nav>
+
+        <!-- Info column -->
+        <nav aria-label="Site information">
+          <h3 class="footer-col-title">Info</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="#about" class="footer-link">About Max</a></li>
+            <li><a href="mailto:contact@booksByMax.com" class="footer-link">Contact</a></li>
+            <li><a href="#" class="footer-link">Privacy Policy</a></li>
+            <li><a href="#" class="footer-link">Terms of Use</a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <!-- Footer bottom bar -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; <span id="footer-year">2025</span> BooksByMax Designs. All rights reserved.
+        </p>
+        <div class="footer-legal-links">
+          <a href="#" class="footer-legal-link">Privacy Policy</a>
+          <a href="#" class="footer-legal-link">Terms of Use</a>
+        </div>
+        <span class="footer-amazon-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.7-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.074-1.047-.872-1.234-1.276-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.66 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.891 5.942-1.095v-.41c0-.753.06-1.642-.384-2.294-.385-.579-1.124-.82-1.775-.82-1.205 0-2.277.618-2.54 1.897-.054.285-.261.567-.549.582l-3.061-.333c-.259-.056-.548-.266-.472-.66C5.497 1.99 8.476 1 11.14 1c1.401 0 3.231.373 4.334 1.435 1.401 1.311 1.267 3.059 1.267 4.963v4.496c0 1.353.561 1.948 1.089 2.678.186.262.226.575-.009.769l-2.677 2.454zm3.856 2.205C19.6 21.245 17.3 22 15.34 22c-2.661 0-5.055-.985-6.862-2.619-.142-.128-.015-.303.156-.203 1.954 1.137 4.369 1.82 6.865 1.82 1.684 0 3.537-.349 5.241-1.072.257-.109.473.169.26.374zm.543-1.747c-.194-.249-1.282-.118-1.77-.059-.149.018-.172-.112-.038-.206.867-.611 2.29-.434 2.456-.23.167.207-.044 1.635-.858 2.317-.125.105-.244.049-.188-.089.183-.457.594-1.484.398-1.733z"/></svg>
+          Available on Amazon
+        </span>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       JAVASCRIPT — Minimal, no frameworks
+       ============================================================ -->
+  <!-- Book Data Engine: loads books.json and renders all book cards -->
+  <script src="assets/js/books-engine.js"></script>
+  <!-- Catalog Controls: filtering, search, sort, load-more -->
+  <script src="assets/js/catalog-controls.js"></script>
+  <!-- Social Proof & Conversion: testimonials, region detection, share -->
+  <script src="assets/js/social-proof.js"></script>
+  <!-- Site interactions: nav, scroll, animations -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
