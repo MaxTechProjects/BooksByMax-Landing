@@ -1,0 +1,24 @@
+/* Purple + Cyan/Electric Blue */
+:root {
+  --color-primary-900: #2e1065;
+  --color-primary-800: #3b0764;
+  --color-primary-700: #6b21a8;
+  --color-primary-600: #7c3aed;
+  --color-primary-500: #8b5cf6;
+  --color-primary-400: #a78bfa;
+  --color-primary-300: #c4b5fd;
+  --color-primary-200: #ddd6fe;
+  --color-primary-100: #ede9fe;
+  --color-primary-50:  #f5f3ff;
+
+  --color-accent-900: #164e63;
+  --color-accent-800: #155e75;
+  --color-accent-700: #0e7490;
+  --color-accent-600: #0891b2;
+  --color-accent-500: #06b6d4;
+  --color-accent-400: #22d3ee;
+  --color-accent-300: #67e8f9;
+  --color-accent-200: #a5f3fc;
+  --color-accent-100: #cffafe;
+  --color-accent-50:  #ecfeff;
+}

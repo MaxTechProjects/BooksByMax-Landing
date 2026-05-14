@@ -20,29 +20,29 @@
 :root {
 
   /* --- Brand Colors --- */
-  /* Primary: deep ink blue — professional, trustworthy */
-  --color-primary-900: #0d1b2a;
-  --color-primary-800: #1b2d45;
-  --color-primary-700: #1e3a5f;
-  --color-primary-600: #2a5298;
-  --color-primary-500: #3a6bc8;
-  --color-primary-400: #5b8de8;
-  --color-primary-300: #8fb3f5;
-  --color-primary-200: #c4d9fb;
-  --color-primary-100: #e8f0fe;
-  --color-primary-50:  #f0f5ff;
+  /* Primary: rich purple/violet — creative, imaginative */
+  --color-primary-900: #2e1065;
+  --color-primary-800: #3b0764;
+  --color-primary-700: #6b21a8;
+  --color-primary-600: #7c3aed;
+  --color-primary-500: #8b5cf6;
+  --color-primary-400: #a78bfa;
+  --color-primary-300: #c4b5fd;
+  --color-primary-200: #ddd6fe;
+  --color-primary-100: #ede9fe;
+  --color-primary-50:  #f5f3ff;
 
-  /* Accent: warm amber/gold — creative, warm, inviting */
-  --color-accent-900: #78350f;
-  --color-accent-800: #92400e;
-  --color-accent-700: #b45309;
-  --color-accent-600: #d97706;
-  --color-accent-500: #f59e0b;
-  --color-accent-400: #fbbf24;
-  --color-accent-300: #fcd34d;
-  --color-accent-200: #fde68a;
-  --color-accent-100: #fef3c7;
-  --color-accent-50:  #fffbeb;
+  /* Accent: fresh mint/turquoise — modern, creative */
+  --color-accent-900: #134e4a;
+  --color-accent-800: #115e59;
+  --color-accent-700: #0f766e;
+  --color-accent-600: #0d9488;
+  --color-accent-500: #14b8a6;
+  --color-accent-400: #2dd4bf;
+  --color-accent-300: #5eead4;
+  --color-accent-200: #99f6e4;
+  --color-accent-100: #ccfbf1;
+  --color-accent-50:  #f0fdfa;
 
   /* Category: Coloring Books — sky blue */
   --color-cat-coloring-dark:   #0369a1;

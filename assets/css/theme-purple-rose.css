@@ -1,0 +1,24 @@
+/* Purple + Soft Pink/Rose */
+:root {
+  --color-primary-900: #2e1065;
+  --color-primary-800: #3b0764;
+  --color-primary-700: #6b21a8;
+  --color-primary-600: #7c3aed;
+  --color-primary-500: #8b5cf6;
+  --color-primary-400: #a78bfa;
+  --color-primary-300: #c4b5fd;
+  --color-primary-200: #ddd6fe;
+  --color-primary-100: #ede9fe;
+  --color-primary-50:  #f5f3ff;
+
+  --color-accent-900: #881337;
+  --color-accent-800: #9f1239;
+  --color-accent-700: #be185d;
+  --color-accent-600: #db2777;
+  --color-accent-500: #ec4899;
+  --color-accent-400: #f472b6;
+  --color-accent-300: #f9a8d4;
+  --color-accent-200: #fbcfe8;
+  --color-accent-100: #fce7f3;
+  --color-accent-50:  #fdf2f8;
+}

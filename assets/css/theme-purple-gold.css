@@ -1,0 +1,24 @@
+/* Purple + Gold/Champagne */
+:root {
+  --color-primary-900: #2e1065;
+  --color-primary-800: #3b0764;
+  --color-primary-700: #6b21a8;
+  --color-primary-600: #7c3aed;
+  --color-primary-500: #8b5cf6;
+  --color-primary-400: #a78bfa;
+  --color-primary-300: #c4b5fd;
+  --color-primary-200: #ddd6fe;
+  --color-primary-100: #ede9fe;
+  --color-primary-50:  #f5f3ff;
+
+  --color-accent-900: #713f12;
+  --color-accent-800: #854d0e;
+  --color-accent-700: #a16207;
+  --color-accent-600: #ca8a04;
+  --color-accent-500: #d4a017;
+  --color-accent-400: #e5b82a;
+  --color-accent-300: #f0d060;
+  --color-accent-200: #f7e8a0;
+  --color-accent-100: #fdf6d8;
+  --color-accent-50:  #fefcf0;
+}
