@@ -752,7 +752,8 @@
     // Render everything
     updateNavLinks(categories);
     renderFeaturedSection(books);
-    renderCategorySections(categories, books);
+    // Category sections now live on individual pages (coloring-books.html, etc.)
+    // renderCategorySections(categories, books);
     updateHeroStats(categories, books);
     updateHeroStack(books);
     updateAboutStats(categories, books);
