@@ -1457,3 +1457,153 @@
   height: 100%;
   min-height: 100%;
 }
+
+
+/* ============================================================
+   PHASE 3: BOOK CARDS & VISUAL POLISH
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   Book Card — Star Ratings
+   ------------------------------------------------------------ */
+.book-card-rating {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  justify-content: center;
+  margin-bottom: var(--space-2);
+  font-size: var(--text-sm);
+}
+
+.book-card-stars {
+  color: var(--color-accent-500);
+  font-size: var(--text-base);
+  letter-spacing: -1px;
+}
+
+.book-card-rating-num {
+  font-weight: var(--font-bold);
+  color: var(--color-text-primary);
+}
+
+.book-card-reviews {
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+}
+
+/* Featured card rating styling */
+.featured-card .meta-tag .book-card-stars,
+.featured-card-meta .meta-tag {
+  font-size: var(--text-xs);
+}
+
+/* ------------------------------------------------------------
+   Book Card — Price Display
+   ------------------------------------------------------------ */
+.book-card-price {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--color-primary-700);
+  margin-bottom: var(--space-3);
+}
+
+/* ------------------------------------------------------------
+   Book Card — Marketplace Flag Links
+   ------------------------------------------------------------ */
+.book-card-marketplaces {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.marketplace-flag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-lg);
+  background: var(--color-neutral-100);
+  border: 1px solid var(--color-border);
+  font-size: var(--text-base);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.marketplace-flag:hover {
+  background: var(--color-primary-50);
+  border-color: var(--color-primary-300);
+  transform: scale(1.15);
+  box-shadow: var(--shadow-md);
+}
+
+/* ------------------------------------------------------------
+   Enhanced Book Card — 3D Tilt Hover Effect
+   ------------------------------------------------------------ */
+.book-card {
+  perspective: 800px;
+}
+
+.book-card:hover {
+  transform: translateY(-5px) rotateX(2deg);
+}
+
+.book-card-cover {
+  transition: transform var(--transition-slow), box-shadow var(--transition-slow);
+}
+
+.book-card:hover .book-card-cover {
+  box-shadow: var(--shadow-xl);
+}
+
+/* Featured card enhanced hover */
+.featured-card {
+  perspective: 1000px;
+}
+
+.featured-card:hover {
+  transform: translateY(-8px) rotateX(1.5deg);
+}
+
+/* ------------------------------------------------------------
+   Smooth Scroll Behavior
+   ------------------------------------------------------------ */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .book-card:hover,
+  .featured-card:hover {
+    transform: none;
+  }
+}
+
+/* ------------------------------------------------------------
+   Enhanced Button Hover States
+   ------------------------------------------------------------ */
+.btn--amazon:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn--amazon:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--outline:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}

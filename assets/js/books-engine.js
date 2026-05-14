@@ -216,6 +216,30 @@
   }
 
   /**
+   * Build small marketplace flag links for book cards.
+   * Shows flag icons for all available marketplaces beyond the primary.
+   * @param {object} book
+   * @returns {string} HTML string
+   */
+  function buildMarketplaceFlags(book) {
+    const urls = book.amazon_urls || {};
+    const primary = CONFIG.defaultMarketplace;
+    const flags = Object.entries(CONFIG.marketplaces)
+      .filter(([key]) => key !== primary && urls[key])
+      .map(([key, mkt]) => `<a
+        href="${esc(urls[key])}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="marketplace-flag"
+        aria-label="Buy on ${mkt.label}"
+        title="${mkt.label}"
+      >${mkt.flag}</a>`)
+      .join('');
+
+    return flags ? `<div class="book-card-marketplaces">${flags}</div>` : '';
+  }
+
+  /**
    * Render a standard book card (used in category grids).
    * @param {object} book
    * @param {number} delay  Animation delay index (1-4)
@@ -224,6 +248,20 @@
   function renderBookCard(book, delay) {
     const delayClass = delay ? ` fade-in-delay-${((delay - 1) % 4) + 1}` : '';
 
+    const ratingHTML = book.rating
+      ? `<div class="book-card-rating">
+           <span class="book-card-stars" title="${book.rating}/5 stars">${renderStars(book.rating)}</span>
+           <span class="book-card-rating-num">${book.rating}</span>
+           ${book.review_count ? `<span class="book-card-reviews">(${fmtNum(book.review_count)})</span>` : ''}
+         </div>`
+      : '';
+
+    const priceHTML = book.price_usd
+      ? `<div class="book-card-price">$${book.price_usd.toFixed(2)}</div>`
+      : '';
+
+    const marketplaceFlags = buildMarketplaceFlags(book);
+
     return `
       <article class="book-card fade-in${delayClass}" aria-label="${esc(book.title)}" data-book-id="${esc(book.id)}">
         <div class="book-card-cover" data-placeholder='<div class="book-cover-placeholder" aria-hidden="true">📚<span>Cover Coming Soon</span></div>'>
@@ -231,8 +269,11 @@
         </div>
         <h3 class="book-card-title">${esc(book.title)}</h3>
         <p class="book-card-meta">${esc(book.age_range || '')}${book.age_range && book.category ? ' &bull; ' : ''}${esc(book.subcategory || '')}</p>
+        ${ratingHTML}
+        ${priceHTML}
         <div class="book-card-actions">
           ${buildAmazonButtons(book, 'card')}
+          ${marketplaceFlags}
         </div>
       </article>
     `;
