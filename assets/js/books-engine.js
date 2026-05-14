@@ -156,7 +156,7 @@
         rel="noopener noreferrer"
         class="btn btn--amazon btn--sm"
         aria-label="Buy ${esc(book.title)} on ${primaryMkt.label}"
-      >View on Amazon</a>`;
+      >Buy on Amazon</a>`;
     }
 
     // Featured layout: primary + secondary marketplace links
@@ -179,7 +179,7 @@
         rel="noopener noreferrer"
         class="btn btn--amazon"
         aria-label="Buy ${esc(book.title)} on ${primaryMkt.label}"
-      >${primaryMkt.flag} Buy on ${primaryMkt.label}</a>
+      >Buy on Amazon</a>
       ${secondaryLinks ? `<div class="featured-card-secondary-links">${secondaryLinks}</div>` : ''}
     `;
   }
@@ -445,6 +445,17 @@
         })
         .slice(0, maxBooks);
       seasonLabel = '';
+    }
+
+    // Ensure we always have exactly maxBooks featured (fill with top sellers if needed)
+    if (featured.length > 0 && featured.length < maxBooks) {
+      const featuredIds = new Set(featured.map(b => b.id));
+      const topSellers = books
+        .filter(b => !featuredIds.has(b.id) && b.cover_filename)
+        .sort((a, b) => (b.sales_count || 0) - (a.sales_count || 0));
+      while (featured.length < maxBooks && topSellers.length > 0) {
+        featured.push(topSellers.shift());
+      }
     }
 
     if (featured.length === 0) {
