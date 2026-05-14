@@ -51,6 +51,7 @@
   let allCategories = [];
   let filteredBooks = [];
   let currentCategory = 'all';
+  let currentSubcategory = 'all';
   let currentAgeRange = 'all';
   let currentSort = 'popularity';
   let currentSearch = '';
@@ -143,6 +144,10 @@
             <div class="catalog-filters" role="group" aria-label="Filter by category">
               <button class="catalog-filter-btn active" data-category="all" aria-pressed="true">All Books</button>
               ${categories.map(cat => `<button class="catalog-filter-btn" data-category="${esc(cat.id)}" aria-pressed="false">${esc(cat.icon)} ${esc(cat.label)}</button>`).join('')}
+            </div>
+
+            <!-- Subcategory / Seasonal filters (shown when a category with subcategories is selected) -->
+            <div class="catalog-subcategory-filters" id="catalog-subcategory-filters" role="group" aria-label="Filter by theme or season" style="display:none;">
             </div>
 
             <!-- Age range filters -->
@@ -250,6 +255,15 @@
     // Category filter
     if (currentCategory !== 'all') {
       books = books.filter(b => b.category === currentCategory);
+    }
+
+    // Subcategory / seasonal filter
+    if (currentSubcategory !== 'all') {
+      books = books.filter(b => {
+        // Match by season_tag or by subcategory name
+        return (b.season_tag && b.season_tag === currentSubcategory) ||
+               (b.subcategory && b.subcategory.toLowerCase().replace(/[^a-z0-9]/g, '') === currentSubcategory.toLowerCase().replace(/[^a-z0-9]/g, ''));
+      });
     }
 
     // Age range filter
@@ -369,6 +383,78 @@
   /* ============================================================
      EVENT BINDING
      ============================================================ */
+  /**
+   * Build and show subcategory filter buttons when a category with subcategories is selected.
+   */
+  function updateSubcategoryFilters() {
+    const container = document.getElementById('catalog-subcategory-filters');
+    if (!container) return;
+
+    // Find the selected category's subcategories metadata
+    const selectedCat = allCategories.find(c => c.id === currentCategory);
+    const subcats = selectedCat && selectedCat.subcategories ? selectedCat.subcategories : [];
+
+    // Also derive subcategories from actual book data for this category
+    let availableSubcats = [];
+    if (currentCategory !== 'all') {
+      const booksInCat = allBooks.filter(b => b.category === currentCategory);
+      const uniqueSubcats = [...new Set(booksInCat.map(b => b.subcategory).filter(Boolean))];
+      const uniqueSeasons = [...new Set(booksInCat.map(b => b.season_tag).filter(Boolean))];
+
+      // Use metadata subcategories if available (they have labels and season info)
+      if (subcats.length > 0) {
+        availableSubcats = subcats.filter(sc => {
+          // Only show subcategories that have matching books
+          return booksInCat.some(b => 
+            (b.season_tag && b.season_tag === sc.id) ||
+            (b.subcategory && b.subcategory.toLowerCase().replace(/[^a-z0-9]/g, '') === sc.id.toLowerCase().replace(/[^a-z0-9]/g, ''))
+          );
+        });
+      } else {
+        // Fallback: derive from book subcategory field
+        availableSubcats = uniqueSubcats.map(sub => ({
+          id: sub.toLowerCase().replace(/[^a-z0-9]/g, ''),
+          label: sub
+        }));
+      }
+    }
+
+    if (availableSubcats.length <= 1) {
+      container.style.display = 'none';
+      container.innerHTML = '';
+      return;
+    }
+
+    // Determine which subcategories are "in season" right now
+    const currentMonth = new Date().getMonth() + 1; // 1-12
+
+    // Build buttons with seasonal highlighting
+    let buttonsHTML = `<button class="catalog-subcategory-btn active" data-subcategory="all" aria-pressed="true">All Themes</button>`;
+    availableSubcats.forEach(sc => {
+      const isInSeason = sc.season_months && sc.season_months.includes(currentMonth);
+      const seasonClass = isInSeason ? ' in-season' : '';
+      const seasonBadge = isInSeason ? '<span class="season-badge">In Season!</span>' : '';
+      buttonsHTML += `<button class="catalog-subcategory-btn${seasonClass}" data-subcategory="${esc(sc.id)}" aria-pressed="false">${esc(sc.label)}${seasonBadge}</button>`;
+    });
+
+    container.innerHTML = buttonsHTML;
+    container.style.display = 'flex';
+
+    // Bind subcategory button events
+    container.querySelectorAll('.catalog-subcategory-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        container.querySelectorAll('.catalog-subcategory-btn').forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
+        currentSubcategory = btn.dataset.subcategory;
+        applyFilters();
+      });
+    });
+  }
+
   function bindEvents() {
     // Category filter buttons
     document.querySelectorAll('.catalog-filter-btn').forEach(btn => {
@@ -380,6 +466,8 @@
         btn.classList.add('active');
         btn.setAttribute('aria-pressed', 'true');
         currentCategory = btn.dataset.category;
+        currentSubcategory = 'all'; // Reset subcategory when category changes
+        updateSubcategoryFilters();
         applyFilters();
       });
     });
@@ -501,6 +589,9 @@
 
     // Bind events
     bindEvents();
+
+    // Initialize subcategory filters
+    updateSubcategoryFilters();
 
     console.info(`[Catalog Controls] Initialized with ${allBooks.length} books, ${allCategories.length} categories.`);
   }

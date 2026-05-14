@@ -13,7 +13,99 @@
       "icon": "🎨",
       "description": "Beautifully illustrated coloring books for kids and toddlers — dinosaurs, animals, flowers, and more. Perfect for building creativity and imagination.",
       "color_theme": "coloring_books",
-      "display_order": 1
+      "display_order": 1,
+      "subcategories": [
+        {
+          "id": "christmas",
+          "label": "🎄 Christmas",
+          "season_months": [
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "easter",
+          "label": "🐣 Easter & Spring",
+          "season_months": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "id": "halloween",
+          "label": "🎃 Halloween",
+          "season_months": [
+            9,
+            10
+          ]
+        },
+        {
+          "id": "thanksgiving",
+          "label": "🦃 Thanksgiving",
+          "season_months": [
+            10,
+            11
+          ]
+        },
+        {
+          "id": "fall",
+          "label": "🍂 Fall / Autumn",
+          "season_months": [
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "spring",
+          "label": "🌸 Spring",
+          "season_months": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "id": "mothers_day",
+          "label": "💐 Mother's Day",
+          "season_months": [
+            4,
+            5
+          ]
+        },
+        {
+          "id": "dinosaurs",
+          "label": "🦕 Dinosaurs",
+          "season_months": null
+        },
+        {
+          "id": "birds",
+          "label": "🐦 Birds",
+          "season_months": null
+        },
+        {
+          "id": "ocean",
+          "label": "🐠 Ocean & Sea Life",
+          "season_months": null
+        },
+        {
+          "id": "animals",
+          "label": "🐾 Animals & Creatures",
+          "season_months": null
+        },
+        {
+          "id": "educational",
+          "label": "📚 Educational",
+          "season_months": null
+        },
+        {
+          "id": "diverse",
+          "label": "🌍 Diverse & Inclusive",
+          "season_months": null
+        }
+      ]
     },
     {
       "id": "coloring-story-books",
@@ -60,7 +152,7 @@
         "au": "https://www.amazon.com.au/dp/B0BHT3PBZX"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Dinosaurs",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations infront of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing Di",
       "cover_filename": "dinosaur_kids_coloring.jpg",
@@ -86,7 +178,7 @@
         "au": "https://www.amazon.com.au/dp/B0BHKLZ76D"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "Dinosaurs",
       "age_range": "1-3",
       "description": "Simple dinosaur designs for toddlers",
       "cover_filename": "dinosaur_toddler_coloring.jpg",
@@ -112,7 +204,7 @@
         "au": "https://www.amazon.com.au/dp/B0B5NP9T92"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Birds",
       "age_range": "2-6",
       "description": "Beautiful bird illustrations to color",
       "cover_filename": "birds_coloring.jpg",
@@ -190,7 +282,7 @@
         "au": "https://www.amazon.com.au/dp/B0CLYGP96Q"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Halloween",
       "age_range": "2-6",
       "description": "Spider-themed coloring book for children",
       "cover_filename": "spider_coloring_kids.jpg",
@@ -203,7 +295,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "halloween",
+      "season_label": "🎃 Halloween"
     },
     {
       "id": "spider-coloring-book-for-toddlers",
@@ -216,7 +310,7 @@
         "au": "https://www.amazon.com.au/dp/B0CLYFWRS3"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "Halloween",
       "age_range": "1-3",
       "description": "Simple spider designs for toddlers",
       "cover_filename": "spider_coloring_toddler.jpg",
@@ -229,7 +323,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "halloween",
+      "season_label": "🎃 Halloween"
     },
     {
       "id": "cute-pumpkin-toddler-coloring-book",
@@ -242,7 +338,7 @@
         "au": "https://www.amazon.com.au/dp/B0CJLCR92N"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "Halloween",
       "age_range": "1-3",
       "description": "Adorable pumpkin designs for toddlers",
       "cover_filename": "cute_pumpkin_toddler.jpg",
@@ -255,7 +351,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "halloween",
+      "season_label": "🎃 Halloween"
     },
     {
       "id": "dinosaur-kids-coloring-book-ages-1-4",
@@ -268,7 +366,7 @@
         "au": "https://www.amazon.com.au/dp/B0BHMP6L68"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Dinosaurs",
       "age_range": "1-4",
       "description": "Fun dinosaur coloring book for young children",
       "cover_filename": "dinosaur_kids_coloring.jpg",
@@ -372,7 +470,7 @@
         "au": "https://www.amazon.com.au/dp/B0BW2X99Z8"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "Animals & Creatures",
       "age_range": "1-3",
       "description": "This is your Childs first experience expressing their creativity.Toddlers and Preschoolers will love this book full of Owl coloring pagesStart showing creativity at an early age with a love for coloringProduce creative leaders for tomorrow new ageUse as a learning and teaching tool for Preschoolers",
       "cover_filename": "owl_toddler_coloring.jpg",
@@ -398,7 +496,7 @@
         "au": "https://www.amazon.com.au/dp/B0B37Z74K3"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "Educational",
       "age_range": "1-3",
       "description": "This is your Childs first experience expressing their creativity.Toddlers and Preschoolers will love this book full of animalsThey start showing creativity at an early age with a love for jungle animalsProduce creative leaders for tomorrow new ageUse as a learning and teaching tool for Preschoolers",
       "cover_filename": "toddler_coloring.jpg",
@@ -476,7 +574,7 @@
         "au": "https://www.amazon.com.au/dp/B0CJKKYNYR"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Halloween",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations infront of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing Pu",
       "cover_filename": "pumpkin_kids_coloring.jpg",
@@ -489,7 +587,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "halloween",
+      "season_label": "🎃 Halloween"
     },
     {
       "id": "cute-bunny-coloring-book-for-kids",
@@ -502,7 +602,7 @@
         "au": "https://www.amazon.com.au/dp/B0BMYM12JL"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Easter & Spring",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations infront of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing Bu",
       "cover_filename": "cute_bunny_kids_coloring.jpg",
@@ -515,7 +615,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "easter",
+      "season_label": "🐣 Easter"
     },
     {
       "id": "christmas-kids-coloring-book",
@@ -528,7 +630,7 @@
         "au": "https://www.amazon.com.au/dp/B0BHTCGFJW"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Christmas",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations infront of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing Ch",
       "cover_filename": "christmas_kids_coloring.jpg",
@@ -541,7 +643,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "christmas",
+      "season_label": "🎄 Christmas"
     },
     {
       "id": "prayer-journal-for-teen-girls",
@@ -580,7 +684,7 @@
         "au": "https://www.amazon.com.au/dp/B0BW2RSL7C"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "Animals & Creatures",
       "age_range": "1-3",
       "description": "This is your Childs first experience expressing their creativity.Toddlers and Preschoolers will love this book full of Butterfly coloring pagesStart showing creativity at an early age with a love for coloringProduce creative leaders for tomorrow new ageUse as a learning and teaching tool for Prescho",
       "cover_filename": "butterfly_toddler_coloring.jpg",
@@ -606,7 +710,7 @@
         "au": "https://www.amazon.com.au/dp/B0BNJHYTJP"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "Farm Animals",
       "age_range": "1-3",
       "description": "This is your Childs first experience expressing their creativity.Toddlers and Preschoolers will love this book full of Farm Animal coloring pagesStart showing creativity at an early age with a love for coloringProduce creative leaders for tomorrow new ageUse as a learning and teaching tool for Presc",
       "cover_filename": "cute_farm_animals_toddler_coloring.jpg",
@@ -632,7 +736,7 @@
         "au": "https://www.amazon.com.au/dp/B0BMZ7HM27"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Animals & Creatures",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations infront of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing Ki",
       "cover_filename": "cute_kitty_kids_coloring.jpg",
@@ -658,7 +762,7 @@
         "au": "https://www.amazon.com.au/dp/B0BJN7CN2X"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "Educational",
       "age_range": "1-3",
       "description": "This is your Childs first experience expressing their creativity.Toddlers and Preschoolers will love this book full of ABC coloring pagesStart showing creativity at an early age with a love for coloringProduce creative leaders for tomorrow new ageUse as a learning and teaching tool for Preschoolers",
       "cover_filename": "first_abc_toddler_coloring.jpg",
@@ -710,7 +814,7 @@
         "au": "https://www.amazon.com.au/dp/B0BCDB8TY1"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Thanksgiving",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations infront of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing Th",
       "cover_filename": "fun_thanksgiving_kids_coloring.jpg",
@@ -723,7 +827,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "thanksgiving",
+      "season_label": "🦃 Thanksgiving"
     },
     {
       "id": "sea-turtle-toddler-coloring-book",
@@ -736,7 +842,7 @@
         "au": "https://www.amazon.com.au/dp/B0CJL27B23"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "Ocean & Sea Life",
       "age_range": "1-3",
       "description": "This is your Childs first experience expressing their creativity.Toddlers and Preschoolers will love this book full of Sea Turtle coloring pagesStart showing creativity at an early age with a love for coloringProduce creative leaders for tomorrow new ageUse as a learning and teaching tool for Presch",
       "cover_filename": "sea_turtle_toddler_coloring.jpg",
@@ -762,7 +868,7 @@
         "au": "https://www.amazon.com.au/dp/B0BHS1M1KB"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "Christmas",
       "age_range": "1-3",
       "description": "This is your Childs first experience expressing their creativity.Toddlers and Preschoolers will love this book full of Christmas Coloring pagesStart showing creativity at an early age with a love for coloringProduce creative leaders for tomorrow new ageUse as a learning and teaching tool for Prescho",
       "cover_filename": "christmas_toddler_coloring.jpg",
@@ -775,7 +881,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "christmas",
+      "season_label": "🎄 Christmas"
     },
     {
       "id": "prayer-journal-for-men",
@@ -814,7 +922,7 @@
         "au": "https://www.amazon.com.au/dp/B0BW31WZWN"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Animals & Creatures",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations in front of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing C",
       "cover_filename": "cute_fox_kids_coloring.jpg",
@@ -840,7 +948,7 @@
         "au": "https://www.amazon.com.au/dp/B0BMYKMXDL"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "Animals & Creatures",
       "age_range": "1-3",
       "description": "This is your Childs first experience expressing their creativity.Toddlers and Preschoolers will love this book full of Kitty Cat coloring pagesStart showing creativity at an early age with a love for coloringProduce creative leaders for tomorrow new ageUse as a learning and teaching tool for Prescho",
       "cover_filename": "cute_kitty_toddler_coloring.jpg",
@@ -892,7 +1000,7 @@
         "au": "https://www.amazon.com.au/dp/B0BJH5VGCR"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Educational",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations infront of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing AB",
       "cover_filename": "first_abc_kids_coloring.jpg",
@@ -944,7 +1052,7 @@
         "au": "https://www.amazon.com.au/dp/B0CMC5SXHR"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "Animals & Creatures",
       "age_range": "1-3",
       "description": "This is your Childs first experience expressing their creativity.Toddlers and Preschoolers will love this book full of Panda coloring pagesStart showing creativity at an early age with a love for coloringProduce creative leaders for tomorrow new ageUse as a learning and teaching tool for Preschooler",
       "cover_filename": "panda_toddler_coloring.jpg",
@@ -996,7 +1104,7 @@
         "au": "https://www.amazon.com.au/dp/B0CM9KSL3C"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "Animals & Creatures",
       "age_range": "1-3",
       "description": "This is your Childs first experience expressing their creativity.Toddlers and Preschoolers will love this book full of Cute Llama coloring pagesStart showing creativity at an early age with a love for coloringProduce creative leaders for tomorrow new ageUse as a learning and teaching tool for Presch",
       "cover_filename": "llama_toddler_coloring.jpg",
@@ -1022,7 +1130,7 @@
         "au": "https://www.amazon.com.au/dp/B0B2TSK344"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Diverse & Inclusive",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world animals right in front of their eyes. They start using different colors which help stimulate their creativity.70 Amazin",
       "cover_filename": "fun_animal_african_american_coloring.jpg",
@@ -1048,7 +1156,7 @@
         "au": "https://www.amazon.com.au/dp/B0BCH39QZH"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "General Toddler",
       "age_range": "1-3",
       "description": "This is your Childs first experience expressing their creativity.Toddlers and Preschoolers will love this book full of Sea animals coloring pagesStart showing creativity at an early age with a love for coloringProduce creative leaders for tomorrow new ageUse as a learning and teaching tool for Presc",
       "cover_filename": "toddler_coloring_1.jpg",
@@ -1100,7 +1208,7 @@
         "au": "https://www.amazon.com.au/dp/B0BW3BDFG9"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Animals & Creatures",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations in front of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing O",
       "cover_filename": "owl_kids_coloring.jpg",
@@ -1126,7 +1234,7 @@
         "au": "https://www.amazon.com.au/dp/B0B2V2CYS7"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Diverse & Inclusive",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world animals right infront of their eyes. They start using different colors which help stimulate their creativity.70 Amazing",
       "cover_filename": "fun_animal_african_american_coloring_1.jpg",
@@ -1152,7 +1260,7 @@
         "au": "https://www.amazon.com.au/dp/B0BR9KT6TP"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "Easter & Spring",
       "age_range": "1-3",
       "description": "This is your Childs first experience expressing their creativity.Toddlers and Preschoolers will love this book full of Easter Egg coloring pagesStart showing creativity at an early age with a love for coloringProduce creative leaders for tomorrow new ageUse as a learning and teaching tool for Presch",
       "cover_filename": "easter_egg_toddler_coloring.jpg",
@@ -1165,7 +1273,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "easter",
+      "season_label": "🐣 Easter"
     },
     {
       "id": "fun-animal-coloring-book-for-girls-ages-1-4",
@@ -1178,7 +1288,7 @@
         "au": "https://www.amazon.com.au/dp/B0B33MK1PW"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "General Kids",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world animals right in front of their eyes. They start using different colors which help stimulate their creativity.70 Amazin",
       "cover_filename": "fun_animal_coloring.jpg",
@@ -1204,7 +1314,7 @@
         "au": "https://www.amazon.com.au/dp/B0BCDB8TWN"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "General Toddler",
       "age_range": "1-3",
       "description": "This is your Childs first experience expressing their creativity.Toddlers and Preschoolers will love this book full of Thanksgiving coloring pagesStart showing creativity at an early age with a love for coloringProduce creative leaders for tomorrow new ageUse as a learning and teaching tool for Pres",
       "cover_filename": "toddler_coloring_2.jpg",
@@ -1256,7 +1366,7 @@
         "au": "https://www.amazon.com.au/dp/B0BMZP8Z79"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "Easter & Spring",
       "age_range": "1-3",
       "description": "This is your Childs first experience expressing their creativity.Toddlers and Preschoolers will love this book full of Cute Bunny coloring pagesStart showing creativity at an early age with a love for coloringProduce creative leaders for tomorrow new ageUse as a learning and teaching tool for Presch",
       "cover_filename": "cute_bunny_toddler_coloring.jpg",
@@ -1269,7 +1379,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "easter",
+      "season_label": "🐣 Easter"
     },
     {
       "id": "spring-flowers-coloring-book-for-toddlers",
@@ -1282,7 +1394,7 @@
         "au": "https://www.amazon.com.au/dp/B0BR9CB2P7"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "Spring",
       "age_range": "1-3",
       "description": "This is your Childs first experience expressing their creativity.Toddlers and Preschoolers will love this book full of Spring Flowers coloring pagesStart showing creativity at an early age with a love for coloringProduce creative leaders for tomorrow new ageUse as a learning and teaching tool for Pr",
       "cover_filename": "spring_flowers_toddler_coloring.jpg",
@@ -1295,7 +1407,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "spring",
+      "season_label": "🌸 Spring"
     },
     {
       "id": "humming-bird-coloring-book-for-toddlers",
@@ -1308,7 +1422,7 @@
         "au": "https://www.amazon.com.au/dp/B0BW2C38WM"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "Birds",
       "age_range": "1-3",
       "description": "This is your Childs first experience expressing their creativity.Toddlers and Preschoolers will love this book full of Humming Bird coloring pagesStart showing creativity at an early age with a love for coloringProduce creative leaders for tomorrow new ageUse as a learning and teaching tool for Pres",
       "cover_filename": "humming_bird_toddler_coloring.jpg",
@@ -1334,7 +1448,7 @@
         "au": "https://www.amazon.com.au/dp/B0CMLZLML3"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "Animals & Creatures",
       "age_range": "1-3",
       "description": "This is your Child's first experience expressing their creativity.Toddlers and Preschoolers will love this book full of Bugs coloring pagesStart showing creativity at an early age with a love for coloringProduce creative leaders for tomorrow new ageUse as a learning and teaching tool for Preschooler",
       "cover_filename": "bugs_toddler_coloring.jpg",
@@ -1386,7 +1500,7 @@
         "au": "https://www.amazon.com.au/dp/B0B33MK1Q2"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "General Kids",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world animals right infront of their eyes. They start using different colors which help stimulate their creativity.70 Amazing",
       "cover_filename": "fun_animal_coloring_1.jpg",
@@ -1412,7 +1526,7 @@
         "au": "https://www.amazon.com.au/dp/B0BW2LXP58"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "Animals & Creatures",
       "age_range": "1-3",
       "description": "This is your Childs first experience expressing their creativity.Toddlers and Preschoolers will love this book full of Cute Fox coloring pagesStart showing creativity at an early age with a love for coloringProduce creative leaders for tomorrow new ageUse as a learning and teaching tool for Preschoo",
       "cover_filename": "cute_fox_toddler_coloring.jpg",
@@ -1438,7 +1552,7 @@
         "au": "https://www.amazon.com.au/dp/B0BCD7Y4BT"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "General Toddler",
       "age_range": "1-3",
       "description": "This is your Childs first experience expressing their creativity.Toddlers and Preschoolers will love this book full of Halloween coloring pagesStart showing creativity at an early age with a love for coloringProduce creative leaders for tomorrow new ageUse as a learning and teaching tool for Prescho",
       "cover_filename": "toddler_coloring_3.jpg",
@@ -1464,7 +1578,7 @@
         "au": "https://www.amazon.com.au/dp/B0BCDB6SFZ"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Ocean & Sea Life",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real Sea animals right in-front of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing",
       "cover_filename": "fun_sealife_kids_coloring.jpg",
@@ -1490,7 +1604,7 @@
         "au": "https://www.amazon.com.au/dp/B0BMY74HVR"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Animals & Creatures",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations infront of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing Pu",
       "cover_filename": "cute_puppy_dog_kids_coloring.jpg",
@@ -1516,7 +1630,7 @@
         "au": "https://www.amazon.com.au/dp/B0BNGZGQW8"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Farm Animals",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations infront of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing Fa",
       "cover_filename": "cute_farm_animals_kids_coloring.jpg",
@@ -1542,7 +1656,7 @@
         "au": "https://www.amazon.com.au/dp/B0BTP1TXNN"
       },
       "category": "cookbooks",
-      "subcategory": "Kids Recipes",
+      "subcategory": "Easter Recipes",
       "age_range": "2-6",
       "description": "Have you ever just wanted a place to write all those personal, family recipes from Mom or Grandma? Now you can do that in one easy to find kids book. Simple book for all those kids and youngones who love cooking and would like to save their recipes for later reading. Can be personalized to reflect t",
       "cover_filename": "kids_recipe_book_1.jpg",
@@ -1555,7 +1669,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "easter",
+      "season_label": "🐣 Easter"
     },
     {
       "id": "christmas-cookie-recipe-book",
@@ -1581,7 +1697,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "christmas",
+      "season_label": "🎄 Christmas"
     },
     {
       "id": "fun-birds-coloring-book-for-boys-ages-1-4",
@@ -1594,7 +1712,7 @@
         "au": "https://www.amazon.com.au/dp/B0B5KXB6LX"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Birds",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world birds right in front of their eyes.They start using different colors which help stimulate their creativity.Over 70 Amaz",
       "cover_filename": "birds_coloring_1.jpg",
@@ -1620,7 +1738,7 @@
         "au": "https://www.amazon.com.au/dp/B0B5KXF822"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Birds",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world birds right in front of their eyes.They start using different colors which help stimulate their creativity.Over 70 Amaz",
       "cover_filename": "birds_coloring_2.jpg",
@@ -1646,7 +1764,7 @@
         "au": "https://www.amazon.com.au/dp/B0BN62H7YY"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "Animals & Creatures",
       "age_range": "1-3",
       "description": "This is your Childs first experience expressing their creativity.Toddlers and Preschoolers will love this book full of Puppy coloring pagesStart showing creativity at an early age with a love for coloringProduce creative leaders for tomorrow new ageUse as a learning and teaching tool for Preschooler",
       "cover_filename": "cute_puppy_dog_toddler_coloring.jpg",
@@ -1685,7 +1803,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "christmas",
+      "season_label": "🎄 Christmas"
     },
     {
       "id": "ladybug-coloring-book-for-toddlers",
@@ -1698,7 +1818,7 @@
         "au": "https://www.amazon.com.au/dp/B0CLRDG1H4"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "Animals & Creatures",
       "age_range": "1-3",
       "description": "This is your Childs first experience expressing their creativity.Toddlers and Preschoolers will love this book full of Ladybug coloring pagesStart showing creativity at an early age with a love for coloringProduce creative leaders for tomorrow new ageUse as a learning and teaching tool for Preschool",
       "cover_filename": "ladybug_toddler_coloring.jpg",
@@ -1724,7 +1844,7 @@
         "au": "https://www.amazon.com.au/dp/B0CM9NPCDN"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Animals & Creatures",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations infront of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing Ll",
       "cover_filename": "llama_kids_coloring.jpg",
@@ -1776,7 +1896,7 @@
         "au": "https://www.amazon.com.au/dp/B0BR9CCQM3"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Easter & Spring",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations infront of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing Ea",
       "cover_filename": "easter_egg_kids_coloring.jpg",
@@ -1789,7 +1909,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "easter",
+      "season_label": "🐣 Easter"
     },
     {
       "id": "humming-bird-coloring-book-for-kids",
@@ -1802,7 +1924,7 @@
         "au": "https://www.amazon.com.au/dp/B0BW2RY3LH"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Birds",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations in front of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing H",
       "cover_filename": "humming_bird_kids_coloring.jpg",
@@ -1828,7 +1950,7 @@
         "au": "https://www.amazon.com.au/dp/B0CJL9W1RX"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Ocean & Sea Life",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations infront of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing Se",
       "cover_filename": "sea_turtle_kids_coloring.jpg",
@@ -1854,7 +1976,7 @@
         "au": "https://www.amazon.com.au/dp/B0CLRGRJB4"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Animals & Creatures",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations infront of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing La",
       "cover_filename": "ladybug_kids_coloring.jpg",
@@ -1880,7 +2002,7 @@
         "au": "https://www.amazon.com.au/dp/B0B5KKBYJY"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Birds",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world birds right in front of their eyes.They start using different colors which help stimulate their creativity.Over 70 Amaz",
       "cover_filename": "birds_coloring_3.jpg",
@@ -1906,7 +2028,7 @@
         "au": "https://www.amazon.com.au/dp/B0B5KVJLJV"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Birds",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world birds right in front of their eyes.They start using different colors which help stimulate their creativity.Over 70 Amaz",
       "cover_filename": "birds_coloring_4.jpg",
@@ -1932,7 +2054,7 @@
         "au": "https://www.amazon.com.au/dp/B0BCNGJR5B"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Halloween",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real creations of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing Spooky Halloween",
       "cover_filename": "fun_halloween_kids_coloring.jpg",
@@ -1945,7 +2067,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "halloween",
+      "season_label": "🎃 Halloween"
     },
     {
       "id": "first-abc-kids-coloring-book-g5jf",
@@ -1958,7 +2082,7 @@
         "au": "https://www.amazon.com.au/dp/B0BJD6G5JF"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Educational",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations infront of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing AB",
       "cover_filename": "first_abc_kids_coloring_1.jpg",
@@ -1984,7 +2108,7 @@
         "au": "https://www.amazon.com.au/dp/B0BMZBGHGL"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Animals & Creatures",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations infront of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing Ki",
       "cover_filename": "cute_kitty_kids_coloring_1.jpg",
@@ -2023,7 +2147,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "christmas",
+      "season_label": "🎄 Christmas"
     },
     {
       "id": "fun-fall-coloring-book-for-toddlers",
@@ -2036,7 +2162,7 @@
         "au": "https://www.amazon.com.au/dp/B0BR9DMDPL"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "Fall / Autumn",
       "age_range": "1-3",
       "description": "This is your Childs first experience expressing their creativity.Toddlers and Preschoolers will love this book full of Fun Fall coloring pagesStart showing creativity at an early age with a love for coloringProduce creative leaders for tomorrow new ageUse as a learning and teaching tool for Preschoo",
       "cover_filename": "fun_fall_toddler_coloring.jpg",
@@ -2049,7 +2175,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "fall",
+      "season_label": "🍂 Fall"
     },
     {
       "id": "butterfly-coloring-book-for-kids",
@@ -2062,7 +2190,7 @@
         "au": "https://www.amazon.com.au/dp/B0BW23BTKW"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Animals & Creatures",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations in front of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing B",
       "cover_filename": "butterfly_kids_coloring.jpg",
@@ -2114,7 +2242,7 @@
         "au": "https://www.amazon.com.au/dp/B0CJSG2H1Q"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Ocean & Sea Life",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations infront of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing Se",
       "cover_filename": "sea_turtle_kids_coloring_1.jpg",
@@ -2140,7 +2268,7 @@
         "au": "https://www.amazon.com.au/dp/B0CJSTWT17"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "Ocean & Sea Life",
       "age_range": "1-3",
       "description": "This is your Childs first experience expressing their creativity.Toddlers and Preschoolers will love this book full of Funny Fish coloring pagesStart showing creativity at an early age with a love for coloringProduce creative leaders for tomorrow new ageUse as a learning and teaching tool for Presch",
       "cover_filename": "fish_toddler_coloring.jpg",
@@ -2166,7 +2294,7 @@
         "au": "https://www.amazon.com.au/dp/B0CJXK75JH"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Ocean & Sea Life",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations infront of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing Fu",
       "cover_filename": "fish_kids_coloring.jpg",
@@ -2192,7 +2320,7 @@
         "au": "https://www.amazon.com.au/dp/B0CMLVJFDH"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Animals & Creatures",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations infront of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing Bu",
       "cover_filename": "bugs_kids_coloring.jpg",
@@ -2218,7 +2346,7 @@
         "au": "https://www.amazon.com.au/dp/B0CPQ254ZQ"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Animals & Creatures",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations infront of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing Bu",
       "cover_filename": "bugs_kids_coloring_1.jpg",
@@ -2244,7 +2372,7 @@
         "au": "https://www.amazon.com.au/dp/B0CPQ36KFV"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "Animals & Creatures",
       "age_range": "1-3",
       "description": "This is your Childs first experience expressing their creativity.Toddlers and Preschoolers will love this book full of Bugs coloring pagesStart showing creativity at an early age with a love for coloringProduce creative leaders for tomorrow new ageUse as a learning and teaching tool for Preschoolers",
       "cover_filename": "bugs_toddler_coloring_1.jpg",
@@ -2283,7 +2411,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "christmas",
+      "season_label": "🎄 Christmas"
     },
     {
       "id": "christmas-recipe-book-for-men",
@@ -2309,7 +2439,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "christmas",
+      "season_label": "🎄 Christmas"
     },
     {
       "id": "christmas-recipe-book-for-women",
@@ -2335,7 +2467,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "christmas",
+      "season_label": "🎄 Christmas"
     },
     {
       "id": "cute-hamster-coloring-book-for-kids",
@@ -2348,7 +2482,7 @@
         "au": "https://www.amazon.com.au/dp/B0CJL9SZN3"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Animals & Creatures",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations infront of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing Cu",
       "cover_filename": "cute_hamster_kids_coloring.jpg",
@@ -2374,7 +2508,7 @@
         "au": "https://www.amazon.com.au/dp/B0CJLLLV13"
       },
       "category": "coloring-books",
-      "subcategory": "Toddler Coloring",
+      "subcategory": "Animals & Creatures",
       "age_range": "1-3",
       "description": "This is your Childs first experience expressing their creativity.Toddlers and Preschoolers will love this book full of Cute Hamster coloring pagesStart showing creativity at an early age with a love for coloringProduce creative leaders for tomorrow new ageUse as a learning and teaching tool for Pres",
       "cover_filename": "cute_hamster_toddler_coloring.jpg",
@@ -2426,7 +2560,7 @@
         "au": "https://www.amazon.com.au/dp/B0BTP1TXNP"
       },
       "category": "cookbooks",
-      "subcategory": "Recipe Books",
+      "subcategory": "Easter Recipes",
       "age_range": "2-6",
       "description": "Have you ever just wanted a place to write all those personal, family recipes from Mom or Grandma? Now you can do that in one easy to find kids book. Simple book for all those kids and youngones who love cooking and would like to save their recipes for later reading. Can be personalized to reflect t",
       "cover_filename": "easter_recipe_men.jpg",
@@ -2439,7 +2573,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "easter",
+      "season_label": "🐣 Easter"
     },
     {
       "id": "easter-recipe-book-for-women",
@@ -2452,7 +2588,7 @@
         "au": "https://www.amazon.com.au/dp/B0BTP1TXN9"
       },
       "category": "cookbooks",
-      "subcategory": "Recipe Books",
+      "subcategory": "Easter Recipes",
       "age_range": "2-6",
       "description": "Have you ever just wanted a place to write all those personal, family recipes from Mom or Grandma? Now you can do that in one easy to find kids book. Simple book for all those kids and youngones who love cooking and would like to save their recipes for later reading. Can be personalized to reflect t",
       "cover_filename": "easter_recipe_women.jpg",
@@ -2465,7 +2601,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "easter",
+      "season_label": "🐣 Easter"
     },
     {
       "id": "fun-fall-coloring-book-for-kids",
@@ -2478,7 +2616,7 @@
         "au": "https://www.amazon.com.au/dp/B0BR9DQGVM"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Fall / Autumn",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations infront of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing Fu",
       "cover_filename": "fun_fall_kids_coloring.jpg",
@@ -2491,7 +2629,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "fall",
+      "season_label": "🍂 Fall"
     },
     {
       "id": "music-composition-notebook-t4m5",
@@ -2582,7 +2722,7 @@
         "au": "https://www.amazon.com.au/dp/B0BTNSM73N"
       },
       "category": "cookbooks",
-      "subcategory": "Recipe Books",
+      "subcategory": "Easter Recipes",
       "age_range": "2-6",
       "description": "Have you ever just wanted a place to write all those personal, family recipes from Mom or Grandma? Now you can do that in one easy to find kids book. Simple book for all those kids and youngones who love cooking and would like to save their recipes for later reading. Can be personalized to reflect t",
       "cover_filename": "easter_recipe_mom.jpg",
@@ -2595,7 +2735,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "easter",
+      "season_label": "🐣 Easter"
     },
     {
       "id": "my-easter-recipes-from-grandma",
@@ -2608,7 +2750,7 @@
         "au": "https://www.amazon.com.au/dp/B0BTP1WNLD"
       },
       "category": "cookbooks",
-      "subcategory": "Recipe Books",
+      "subcategory": "Easter Recipes",
       "age_range": "2-6",
       "description": "Have you ever just wanted a place to write all those personal, family recipes from Mom or Grandma? Now you can do that in one easy to find kids book. Simple book for all those kids and youngones who love cooking and would like to save their recipes for later reading. Can be personalized to reflect t",
       "cover_filename": "easter_recipe_grandma.jpg",
@@ -2621,7 +2763,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "easter",
+      "season_label": "🐣 Easter"
     },
     {
       "id": "my-favorite-christmas-recipes",
@@ -2647,7 +2791,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "christmas",
+      "season_label": "🎄 Christmas"
     },
     {
       "id": "panda-coloring-book-for-kids",
@@ -2660,7 +2806,7 @@
         "au": "https://www.amazon.com.au/dp/B0CQST5VSJ"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Animals & Creatures",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations infront of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing Pa",
       "cover_filename": "panda_kids_coloring.jpg",
@@ -2686,7 +2832,7 @@
         "au": "https://www.amazon.com.au/dp/B0BR996VVN"
       },
       "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "subcategory": "Spring",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations infront of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing Sp",
       "cover_filename": "spring_flowers_kids_coloring.jpg",
@@ -2699,7 +2845,9 @@
       "price_usd": 7.99,
       "pages": 70,
       "publisher": "BooksByMax Designs",
-      "published_year": 2024
+      "published_year": 2024,
+      "season_tag": "spring",
+      "season_label": "🌸 Spring"
     }
   ]
 }

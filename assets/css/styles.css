@@ -2115,3 +2115,104 @@ html {
 .hero-stat-number.counting {
   animation: counter-pulse 0.3s ease-in-out infinite;
 }
+
+/* ============================================================
+   SUBCATEGORY / SEASONAL FILTER BUTTONS
+   ============================================================ */
+.catalog-subcategory-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--color-border, #e2e8f0);
+  border-bottom: 1px solid var(--color-border, #e2e8f0);
+  margin-bottom: 0.5rem;
+}
+
+.catalog-subcategory-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.9rem;
+  border: 1.5px solid var(--color-border, #e2e8f0);
+  border-radius: 2rem;
+  background: var(--color-surface, #fff);
+  color: var(--color-text-muted, #64748b);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.catalog-subcategory-btn:hover {
+  border-color: var(--color-primary, #1e293b);
+  color: var(--color-primary, #1e293b);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.catalog-subcategory-btn.active {
+  background: var(--color-primary, #1e293b);
+  border-color: var(--color-primary, #1e293b);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(30, 41, 59, 0.2);
+}
+
+/* Seasonal highlight — glowing border for "in season" subcategories */
+.catalog-subcategory-btn.in-season {
+  border-color: var(--color-accent, #f59e0b);
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+  color: #92400e;
+  animation: seasonPulse 2s ease-in-out infinite;
+}
+
+.catalog-subcategory-btn.in-season:hover {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-color: #d97706;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.catalog-subcategory-btn.in-season.active {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  border-color: #b45309;
+  color: #fff;
+  animation: none;
+}
+
+@keyframes seasonPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.2); }
+  50% { box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.1); }
+}
+
+/* Season badge inside the button */
+.season-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  background: #f59e0b;
+  color: #fff;
+  padding: 0.1rem 0.4rem;
+  border-radius: 1rem;
+  margin-left: 0.25rem;
+}
+
+.catalog-subcategory-btn.active .season-badge {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 640px) {
+  .catalog-subcategory-filters {
+    gap: 0.4rem;
+    padding: 0.5rem 0;
+  }
+
+  .catalog-subcategory-btn {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.7rem;
+  }
+}
