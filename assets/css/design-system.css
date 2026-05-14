@@ -487,15 +487,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Amazon button */
 .btn--amazon {
-  background: #ff9900;
-  color: #0f1111;
-  border-color: #ff9900;
+  background: var(--color-accent-500);
+  color: #ffffff;
+  border-color: var(--color-accent-500);
   font-weight: var(--font-bold);
 }
 
 .btn--amazon:hover {
-  background: #e68a00;
-  border-color: #e68a00;
+  background: var(--color-accent-600);
+  border-color: var(--color-accent-600);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
