@@ -16,12 +16,20 @@
       "display_order": 1
     },
     {
+      "id": "coloring-story-books",
+      "label": "Coloring & Story Books",
+      "icon": "📖",
+      "description": "Imaginative coloring books combined with engaging stories — where creativity meets storytelling for young readers.",
+      "color_theme": "coloring_story_books",
+      "display_order": 2
+    },
+    {
       "id": "journals",
       "label": "Journals",
       "icon": "📓",
       "description": "Guided journals for women — prayer journals, sermon notes, and devotional companions designed with intention and care.",
       "color_theme": "journals",
-      "display_order": 2
+      "display_order": 3
     },
     {
       "id": "cookbooks",
@@ -29,7 +37,7 @@
       "icon": "🍳",
       "description": "Family recipe books and cookbooks — preserve your favorite recipes from Mom, Grandma, and your own kitchen adventures.",
       "color_theme": "cookbooks",
-      "display_order": 3
+      "display_order": 4
     },
     {
       "id": "notebooks",
@@ -37,7 +45,7 @@
       "icon": "📝",
       "description": "Quality notebooks for everyday use — lined, blank, and specialty formats for all your writing needs.",
       "color_theme": "notebooks",
-      "display_order": 4
+      "display_order": 5
     }
   ],
   "books": [
@@ -675,8 +683,8 @@
         "ca": "https://www.amazon.ca/dp/B0F9PSYL9F",
         "au": "https://www.amazon.com.au/dp/B0F9PSYL9F"
       },
-      "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "category": "coloring-story-books",
+      "subcategory": "Coloring & Story",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations infront of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing Di",
       "cover_filename": "dinosaur_kids_coloring_1.jpg",
@@ -1741,8 +1749,8 @@
         "ca": "https://www.amazon.ca/dp/B0FCFXHCXQ",
         "au": "https://www.amazon.com.au/dp/B0FCFXHCXQ"
       },
-      "category": "coloring-books",
-      "subcategory": "Kids Coloring",
+      "category": "coloring-story-books",
+      "subcategory": "Coloring & Story",
       "age_range": "1-4",
       "description": "Build your Kids Creativity and ImaginationBetween the ages of 1 and 4 your child starts developing their creativity and imagination, with this book they can start seeing real world creations infront of their eyes. They start using different colors which help stimulate their creativity.70+ Amazing Di",
       "cover_filename": "dinosaur_kids_coloring_2.jpg",
