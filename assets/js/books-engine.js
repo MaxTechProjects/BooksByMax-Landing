@@ -23,7 +23,7 @@
     dataUrl: 'books.json',
 
     /** Maximum featured books to show (0 = show all flagged) */
-    maxFeatured: 3,
+    maxFeatured: 8,
 
     /** Seasonal featured rotation config */
     seasonalFeatured: {
@@ -402,7 +402,7 @@
 
   /**
    * Populate the #featured section with seasonal or bestseller books.
-   * Shows 3 books at a time. If a season is active, prioritizes seasonal books.
+   * Shows 8 books at a time (4 per row). If a season is active, prioritizes seasonal books.
    * Falls back to manually flagged featured books when no season applies.
    * @param {Array} books  All books from books.json
    */
