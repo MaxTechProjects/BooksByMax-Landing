@@ -23,7 +23,22 @@
     dataUrl: 'books.json',
 
     /** Maximum featured books to show (0 = show all flagged) */
-    maxFeatured: 6,
+    maxFeatured: 3,
+
+    /** Seasonal featured rotation config */
+    seasonalFeatured: {
+      enabled: true,
+      /** Map of season_tag to the months when that season should be promoted (1-12) */
+      seasons: {
+        christmas:    { months: [10, 11, 12], label: '🎄 Christmas Picks' },
+        halloween:    { months: [9, 10], label: '🎃 Halloween Picks' },
+        thanksgiving: { months: [10, 11], label: '🦃 Thanksgiving Picks' },
+        fall:         { months: [9, 10, 11], label: '🍂 Fall Favorites' },
+        easter:       { months: [2, 3, 4], label: '🐣 Easter Picks' },
+        spring:       { months: [3, 4, 5], label: '🌸 Spring Picks' },
+        mothers_day:  { months: [4, 5], label: '💐 Mother\'s Day Picks' }
+      }
+    },
 
     /** Default Amazon marketplace to use for primary CTA */
     defaultMarketplace: 'us',
@@ -366,7 +381,28 @@
      ============================================================ */
 
   /**
-   * Populate the #featured section with featured books.
+   * Determine which seasons are currently active based on the current month.
+   * @returns {Array} Array of { tag, label } objects for active seasons
+   */
+  function getActiveSeasons() {
+    if (!CONFIG.seasonalFeatured.enabled) return [];
+
+    const currentMonth = new Date().getMonth() + 1; // 1-12
+    const active = [];
+
+    for (const [tag, config] of Object.entries(CONFIG.seasonalFeatured.seasons)) {
+      if (config.months.includes(currentMonth)) {
+        active.push({ tag, label: config.label });
+      }
+    }
+
+    return active;
+  }
+
+  /**
+   * Populate the #featured section with seasonal or bestseller books.
+   * Shows 3 books at a time. If a season is active, prioritizes seasonal books.
+   * Falls back to manually flagged featured books when no season applies.
    * @param {Array} books  All books from books.json
    */
   function renderFeaturedSection(books) {
@@ -376,18 +412,39 @@
     const grid = container.querySelector('.featured-grid');
     if (!grid) return;
 
-    // Filter featured books, sort by display_order then sales_count desc
-    let featured = books
-      .filter(b => b.featured === true)
-      .sort((a, b) => {
-        if (a.display_order !== b.display_order) {
-          return (a.display_order || 99) - (b.display_order || 99);
-        }
-        return (b.sales_count || 0) - (a.sales_count || 0);
-      });
+    const maxBooks = CONFIG.maxFeatured || 3;
+    let featured = [];
+    let seasonLabel = '';
 
-    if (CONFIG.maxFeatured > 0) {
-      featured = featured.slice(0, CONFIG.maxFeatured);
+    // Check for active seasons
+    const activeSeasons = getActiveSeasons();
+
+    if (activeSeasons.length > 0) {
+      // Get books matching any active season, prioritize by first active season
+      for (const season of activeSeasons) {
+        const seasonalBooks = books.filter(b => b.season_tag === season.tag);
+        if (seasonalBooks.length > 0) {
+          featured = seasonalBooks
+            .sort((a, b) => (b.sales_count || 0) - (a.sales_count || 0))
+            .slice(0, maxBooks);
+          seasonLabel = season.label;
+          break; // Use the first matching season with available books
+        }
+      }
+    }
+
+    // Fallback: if no seasonal books found, use manually flagged featured books
+    if (featured.length === 0) {
+      featured = books
+        .filter(b => b.featured === true)
+        .sort((a, b) => {
+          if (a.display_order !== b.display_order) {
+            return (a.display_order || 99) - (b.display_order || 99);
+          }
+          return (b.sales_count || 0) - (a.sales_count || 0);
+        })
+        .slice(0, maxBooks);
+      seasonLabel = '';
     }
 
     if (featured.length === 0) {
@@ -399,10 +456,22 @@
       .map((book, i) => renderFeaturedCard(book, i + 1))
       .join('');
 
-    // Update subtitle with total catalog count
+    // Update subtitle based on whether seasonal or default
     const subtitle = container.querySelector('.section-subtitle');
     if (subtitle) {
-      subtitle.textContent = `Our most-loved titles — bestsellers and reader favorites across every category, available on Amazon US, UK, Canada, and Australia.`;
+      if (seasonLabel) {
+        subtitle.textContent = `${seasonLabel} — Seasonal favorites perfect for right now, available on Amazon worldwide.`;
+      } else {
+        subtitle.textContent = `Our most-loved titles — bestsellers and reader favorites across every category, available on Amazon US, UK, Canada, and Australia.`;
+      }
+    }
+
+    // Update section eyebrow if seasonal
+    const eyebrow = container.querySelector('.section-eyebrow');
+    if (eyebrow && seasonLabel) {
+      eyebrow.textContent = 'Seasonal Picks';
+    } else if (eyebrow) {
+      eyebrow.textContent = 'Top Picks';
     }
   }
 
