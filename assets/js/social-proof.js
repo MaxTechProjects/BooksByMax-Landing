@@ -233,6 +233,11 @@
           <div class="testimonial-dots" aria-label="Testimonial navigation">
             ${dotsHTML}
           </div>
+
+          <!-- Back to Top -->
+          <div class="scroll-top">
+            <a href="#top" title="Back to top" aria-label="Back to top of page">&#8593;</a>
+          </div>
         </div>
       </section>
     `;

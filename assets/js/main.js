@@ -9,21 +9,31 @@
   'use strict';
 
   /* ============================================================
-     1. STICKY NAV — add shadow on scroll
+     1. STICKY NAV — add shadow on scroll + back-to-top button
      ============================================================ */
   const nav = document.getElementById('site-nav');
+  const backToTopBtn = document.getElementById('backToTop');
 
-  if (nav) {
-    const onScroll = () => {
+  const onScroll = () => {
+    if (nav) {
       if (window.scrollY > 10) {
         nav.classList.add('scrolled');
       } else {
         nav.classList.remove('scrolled');
       }
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll(); // run once on load
-  }
+    }
+
+    // Show/hide fixed back-to-top button after scrolling past the hero
+    if (backToTopBtn) {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // run once on load
 
 
   /* ============================================================

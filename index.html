@@ -229,6 +229,8 @@
        MAIN CONTENT
        ============================================================ -->
   <main id="main-content">
+    <!-- Scroll anchor for back-to-top -->
+    <span id="top" style="position:absolute;top:0;left:0;width:0;height:0;overflow:hidden;" aria-hidden="true"></span>
 
     <!-- ----------------------------------------------------------
          HERO SECTION
@@ -326,6 +328,11 @@
             <p>Loading featured books&hellip;</p>
           </div>
         </div>
+
+        <!-- Back to Top -->
+        <div class="scroll-top">
+          <a href="#top" title="Back to top" aria-label="Back to top of page">&#8593;</a>
+        </div>
       </div>
     </section>
 
@@ -347,11 +354,10 @@
           <!-- Visual -->
           <div class="about-visual fade-in">
             <div class="about-avatar-wrap">
-              <div class="about-avatar" aria-label="Author avatar placeholder">
-                <!-- Replace with actual author photo: <img src="assets/author-photo.jpg" alt="Max, author of BooksByMax Designs"> -->
-                ✍️
+              <div class="about-avatar" style="background: white;">
+                <img src="assets/logo.png" alt="BooksByMax Designs logo" style="width: 100%; height: 100%; object-fit: cover;">
               </div>
-              <span class="about-avatar-badge">Independent Author</span>
+              <span class="about-avatar-badge">BooksByMax</span>
             </div>
           </div>
 
@@ -363,10 +369,13 @@
             </h2>
             <div class="about-content-body">
               <p>
-                I create books that bring joy and spark creativity — from vibrant coloring books for little ones to guided journals and family recipe books. Every title is crafted with intention, thoughtful layouts, and a passion for purposeful design.
+                Hi! I'm the creator behind BooksByMax Designs. Every book starts with a simple question: <em>will a child's face light up when they see this?</em> Whether it's a dinosaur coloring book, a gratitude journal, or a family recipe book, each one is made with love and a lot of testing with real kids.
               </p>
               <p>
-                With thousands of copies sold across four Amazon marketplaces, I'm grateful for every reader who has welcomed a BooksByMax title into their home. New books are always in the works!
+                It's been incredible watching these books find homes across the US, UK, Canada, and Australia. What started as a few coloring pages has grown into a full catalog — and I'm just getting started.
+              </p>
+              <p>
+                5,500+ copies sold and counting. Thank you for being part of this journey.
               </p>
             </div>
 
@@ -397,6 +406,11 @@
               <a href="mailto:contact@booksByMax.com" class="btn btn--outline-light">
                 Get in Touch
               </a>
+            </div>
+
+            <!-- Back to Top -->
+            <div class="scroll-top scroll-top--light">
+              <a href="#top" title="Back to top" aria-label="Back to top of page">&#8593;</a>
             </div>
           </div>
 
@@ -430,6 +444,11 @@
           <button type="submit" class="btn btn--primary">Notify Me</button>
         </form>
         <span class="cta-form-note">No spam, ever. Unsubscribe anytime.</span>
+
+        <!-- Back to Top -->
+        <div class="scroll-top">
+          <a href="#top" title="Back to top" aria-label="Back to top of page">&#8593;</a>
+        </div>
       </div>
     </section>
 
@@ -526,6 +545,9 @@
   <!-- Book Data Engine: loads books.json and renders all book cards -->
   <script src="assets/js/books-engine.js"></script>
   <!-- Catalog Controls: moved to individual category pages -->
+  <!-- Fixed Back to Top Button (appears on scroll) -->
+  <a href="#top" class="back-to-top-fixed" id="backToTop" title="Back to top" aria-label="Back to top of page">&#8593;</a>
+
   <!-- Social Proof & Conversion: testimonials, region detection, share -->
   <script src="assets/js/social-proof.js"></script>
   <!-- Site interactions: nav, scroll, animations -->

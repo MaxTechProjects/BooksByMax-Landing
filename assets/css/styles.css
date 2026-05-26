@@ -914,7 +914,7 @@
 .about-avatar-badge {
   position: absolute;
   bottom: 10px;
-  right: -10px;
+  right: -25px;
   background: var(--color-accent-500);
   color: var(--color-neutral-900);
   padding: var(--space-2) var(--space-3);
@@ -2215,4 +2215,91 @@ html {
     font-size: 0.75rem;
     padding: 0.35rem 0.7rem;
   }
+}
+
+
+/* ============================================================
+   BACK TO TOP
+   ============================================================ */
+
+/* Per-section subtle back-to-top arrows */
+.scroll-top {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--space-8);
+}
+
+.scroll-top a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--color-primary-100);
+  color: var(--color-primary-600);
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  transition: all var(--transition-base);
+  opacity: 0.55;
+  border: 2px solid transparent;
+  line-height: 1;
+}
+
+.scroll-top a:hover {
+  opacity: 1;
+  background: var(--color-primary-600);
+  color: white;
+  border-color: var(--color-primary-700);
+  transform: translateY(-3px);
+}
+
+/* Floating fixed back-to-top button (appears on scroll) */
+.back-to-top-fixed {
+  position: fixed;
+  bottom: var(--space-8);
+  right: var(--space-8);
+  width: 50px;
+  height: 50px;
+  background: var(--color-primary-600);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.35);
+  transition: all var(--transition-base);
+  opacity: 0;
+  visibility: hidden;
+  z-index: var(--z-sticky);
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.back-to-top-fixed.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top-fixed:hover {
+  background: var(--color-primary-700);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(124, 58, 237, 0.5);
+}
+
+/* Light text variant for on dark backgrounds */
+.scroll-top--light a {
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.scroll-top--light a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.4);
 }
