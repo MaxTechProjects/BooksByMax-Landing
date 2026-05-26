@@ -210,7 +210,7 @@
     const sectionHTML = `
       <section class="testimonials-section section" id="testimonials" aria-labelledby="testimonials-heading">
         <div class="container">
-          <header class="section-header fade-in">
+          <header class="section-header fade-in visible">
             <span class="section-eyebrow">Reader Love</span>
             <h2 class="section-title" id="testimonials-heading">What Readers Are Saying</h2>
             <p class="section-subtitle">Real reviews from real readers on Amazon.</p>

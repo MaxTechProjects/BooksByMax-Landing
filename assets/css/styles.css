@@ -941,6 +941,7 @@
   color: white;
   line-height: var(--leading-tight);
   margin-bottom: var(--space-6);
+  text-align: center;
 }
 
 .about-content-body {
@@ -948,6 +949,7 @@
   color: rgba(255, 255, 255, 0.8);
   line-height: var(--leading-relaxed);
   margin-bottom: var(--space-6);
+  text-align: center;
 }
 
 .about-content-body p + p {
