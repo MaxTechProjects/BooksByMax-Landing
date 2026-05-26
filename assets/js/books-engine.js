@@ -115,7 +115,7 @@
     const h = isFeatured ? 264 : 210;
 
     if (book.cover_filename) {
-      return `<img
+      const img = `<img
         src="${esc(CONFIG.coversDir + book.cover_filename)}"
         alt="${esc(book.title)} — book cover"
         loading="lazy"
@@ -123,6 +123,13 @@
         height="${h}"
         onerror="this.parentElement.innerHTML=this.parentElement.dataset.placeholder"
       >`;
+
+      // Wrap cover image in Amazon link if available
+      const primaryUrl = (book.amazon_urls || {}).us || (book.amazon_urls || {}).com || '';
+      if (primaryUrl) {
+        return `<a href="${esc(primaryUrl)}" target="_blank" rel="noopener noreferrer" aria-label="View ${esc(book.title)} on Amazon" class="cover-link">${img}</a>`;
+      }
+      return img;
     }
 
     // Placeholder
