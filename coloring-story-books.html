@@ -232,7 +232,7 @@
         : '';
 
       return '<article class="book-card fade-in' + delayClass + '" aria-label="' + esc(book.title) + '">' +
-        '<div class="book-card-cover"><img src="assets/covers/' + esc(book.cover_filename) + '" alt="' + esc(book.title) + ' cover" loading="lazy" width="160" height="210" onerror="this.parentElement.innerHTML=\'<div class=book-cover-placeholder>📚<span>Cover Coming Soon</span></div>\'"></div>' +
+        '<div class="book-card-cover">' + (primaryUrl ? '<a href="' + esc(primaryUrl) + '" target="_blank" rel="noopener noreferrer" aria-label="View on Amazon">' : '') + '<img src="assets/covers/' + esc(book.cover_filename) + '" alt="' + esc(book.title) + ' cover" loading="lazy" width="160" height="210" onerror="this.parentElement.innerHTML=\'<div class=book-cover-placeholder>📚<span>Cover Coming Soon</span></div>\'">' + (primaryUrl ? '</a>' : '') + '</div>' +
         '<h3 class="book-card-title">' + esc(book.title) + '</h3>' +
         '<p class="book-card-meta">' + esc(book.age_range || '') + (book.age_range && book.subcategory ? ' &bull; ' : '') + esc(book.subcategory || '') + '</p>' +
         ratingHTML + priceHTML +

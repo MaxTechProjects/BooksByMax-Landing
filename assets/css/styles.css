@@ -2305,3 +2305,15 @@ html {
   color: white;
   border-color: rgba(255, 255, 255, 0.4);
 }
+
+
+/* Cover image as clickable Amazon link */
+.book-card-cover a.cover-link,
+.book-cover-wrap a.cover-link {
+  display: block;
+  text-decoration: none;
+  line-height: 0;
+}
+.book-card-cover a.cover-link:hover {
+  opacity: 0.9;
+}
