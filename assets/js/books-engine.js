@@ -782,4 +782,65 @@
     init();
   }
 
+  /* ============================================================
+     GOOGLE ANALYTICS (GA4) — Amazon outbound click tracking
+     ------------------------------------------------------------
+     Fires a GA4 'amazon_click' event whenever any link to Amazon
+     is clicked (cover links + all "Buy on Amazon" buttons).
+
+     - Requires gtag() to be defined. The GA snippet with the real
+       GA_MEASUREMENT_ID must be present in the <head> of the page.
+     - If gtag is not loaded yet, gracefully falls back to waiting
+       until it is available (so YouTube/other deferred scripts
+       don't break the tracker).
+     - The ASIN is parsed from the href (e.g. .../dp/B0XXXXXX).
+     ============================================================ */
+  function stripAmazonParams(url) {
+    // Remove tracking params so events + GA sessions aren't polluted.
+    const u = new URL(url);
+    ['tag','linkCode','psc','keywords','qid','sr','ref','th'].forEach(k => u.searchParams.delete(k));
+    return u.toString();
+  }
+
+  function parseAsin(href) {
+    const m = String(href).match(/[/=]B0[A-Z0-9]{8,9}(?:[^A-Z0-9]|$)/);
+    return m ? m[0].replace(/[^A-Z0-9]/g, '') : '';
+  }
+
+  function parseMarketplace(href) {
+    try {
+      const host = new URL(href).hostname.replace(/^www\./,'').split('.')[0];
+      return host || 'unknown'; // amazon / amazon.co.uk->'co' etc.
+    } catch (e) {
+      return 'unknown';
+    }
+  }
+
+  function sendAmazonClick(href, label) {
+    const asin = parseAsin(href);
+    const payload = {
+      event_category: 'outbound',
+      event_label: label || 'amazon-link',
+      link_url: stripAmazonParams(href),
+      amazon_marketplace: parseMarketplace(href)
+    };
+    if (asin) payload.book_asin = asin;
+
+    const fire = () => window.gtag && window.gtag('event', 'amazon_click', payload);
+    if (window.gtag) { fire(); }
+    else if (window.dataLayer) {
+      // gtag script may still be loading; queue it via dataLayer directly.
+      window.dataLayer.push({ event: 'amazon_click', ...payload });
+    }
+  }
+
+  document.addEventListener('click', function (e) {
+    // Find the clicked anchor (climb up if a child of the link was hit).
+    const link = e.target.closest ? e.target.closest('a[href*="amazon"]') : null;
+    if (!link) return;
+    const href = link.getAttribute('href');
+    if (!href || href.startsWith('#')) return;
+    sendAmazonClick(href, link.getAttribute('aria-label') || link.textContent.trim().slice(0, 60));
+  }, true);
+
 })();
