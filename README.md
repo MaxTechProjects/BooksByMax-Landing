@@ -154,7 +154,7 @@ Search and replace `maxtechprojects.github.io/BooksByMax-Landing` with your doma
 
 1. Create a Google Analytics 4 property at [analytics.google.com](https://analytics.google.com)
 2. Get your Measurement ID (format: `G-XXXXXXXXXX`)
-3. In `index.html`, replace both instances of `GA_MEASUREMENT_ID` with your actual ID
+3. In every HTML page, replace both instances of the ID in the gtag snippet (currently `G-7HM80H7R4Y`)
 
 ---
 

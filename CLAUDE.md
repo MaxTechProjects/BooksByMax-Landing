@@ -54,7 +54,7 @@ All styles in `assets/css/styles.css` using CSS custom properties. Design tokens
 | Testimonials | `assets/js/social-proof.js` → `SP_CONFIG.testimonials` array |
 | Author bio | `index.html` → `#about` section |
 | Site colors/fonts | `assets/css/styles.css` → `:root` custom properties |
-| GA Measurement ID | `index.html` → replace both `GA_MEASUREMENT_ID` instances |
+| GA Measurement ID | `G-7HM80H7R4Y`, in the gtag snippet of all 6 HTML pages (change it in every page) |
 
 ## Adding a book
 
